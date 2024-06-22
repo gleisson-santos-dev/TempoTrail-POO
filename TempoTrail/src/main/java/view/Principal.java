@@ -26,31 +26,97 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        JlTitulo = new javax.swing.JLabel();
+        JbEquipe = new javax.swing.JButton();
+        JbTreino = new javax.swing.JButton();
+        JbAtleta = new javax.swing.JButton();
+        JbDesempenho = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("TempoTrail");
+        JlTitulo.setText("TempoTrail");
+
+        JbEquipe.setText("Equipe");
+        JbEquipe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JbEquipeActionPerformed(evt);
+            }
+        });
+
+        JbTreino.setText("Treino");
+        JbTreino.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JbTreinoActionPerformed(evt);
+            }
+        });
+
+        JbAtleta.setText("Atleta");
+        JbAtleta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JbAtletaActionPerformed(evt);
+            }
+        });
+
+        JbDesempenho.setText("Desempenho");
+        JbDesempenho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JbDesempenhoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(228, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(202, 202, 202))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(200, 200, 200)
+                .addComponent(JlTitulo)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(JbAtleta, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                    .addComponent(JbEquipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JbTreino, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JbDesempenho, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(102, 102, 102))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(278, Short.MAX_VALUE))
+                .addGap(24, 24, 24)
+                .addComponent(JlTitulo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JbEquipe)
+                    .addComponent(JbTreino))
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JbAtleta)
+                    .addComponent(JbDesempenho))
+                .addContainerGap(179, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void JbEquipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbEquipeActionPerformed
+        new Equipe().setVisible(true);
+    }//GEN-LAST:event_JbEquipeActionPerformed
+
+    private void JbAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbAtletaActionPerformed
+        new Atleta().setVisible(true);
+    }//GEN-LAST:event_JbAtletaActionPerformed
+
+    private void JbTreinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbTreinoActionPerformed
+        new Treino().setVisible(true);
+    }//GEN-LAST:event_JbTreinoActionPerformed
+
+    private void JbDesempenhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbDesempenhoActionPerformed
+        new Desempenho().setVisible(true);
+    }//GEN-LAST:event_JbDesempenhoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,6 +144,9 @@ public class Principal extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -88,6 +157,10 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton JbAtleta;
+    private javax.swing.JButton JbDesempenho;
+    private javax.swing.JButton JbEquipe;
+    private javax.swing.JButton JbTreino;
+    private javax.swing.JLabel JlTitulo;
     // End of variables declaration//GEN-END:variables
 }
