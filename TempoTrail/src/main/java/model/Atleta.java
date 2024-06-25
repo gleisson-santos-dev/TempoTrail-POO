@@ -9,23 +9,23 @@ package model;
  * @author gabri
  */
 public class Atleta extends Usuario{
-    public String peso;
-    public String altura;
+    public float peso;
+    public float altura;
     public String categoria;
     
-    public String getPeso() {
+    public float getPeso() {
         return peso;
     }
 
-    public void setPeso(String peso) {
+    public void setPeso(float peso) {
         this.peso = peso;
     }
 
-    public String getAltura() {
+    public float getAltura() {
         return altura;
     }
 
-    public void setAltura(String altura) {
+    public void setAltura(float altura) {
         this.altura = altura;
     }
 

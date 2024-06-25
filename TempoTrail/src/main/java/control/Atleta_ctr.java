@@ -28,10 +28,10 @@ public class Atleta_ctr {
             String sql = "INSERT INTO Atleta(nome, idade, cpf, peso, altura, categoria)VALUES(?,?,?,?,?,?);";
             ps = conn.prepareStatement(sql);
             ps.setString(1,a1.getNome());
-            ps.setString(2,a1.getIdade());
+            ps.setInt(2,a1.getIdade());
             ps.setString(3,a1.getCpf());
-            ps.setString(4,a1.getPeso());
-            ps.setString(5,a1.getAltura());
+            ps.setFloat(4,a1.getPeso());
+            ps.setFloat(5,a1.getAltura());
             ps.setString(6,a1.getCategoria());
             ps.execute();
             ps.close();
@@ -45,10 +45,10 @@ public class Atleta_ctr {
     public static void main(String args []){
         Atleta a1 = new Atleta();
         a1.setNome("gustavo");
-        a1.setIdade("18");
-        a1.setAltura("1.65");
+        a1.setIdade(18);
+        a1.setAltura(165);
         a1.setCpf("12345678911");
-        a1.setPeso("70");
+        a1.setPeso(70);
         a1.setCategoria("corrida");
         
         cadastrarAtleta(a1);
