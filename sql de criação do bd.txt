@@ -1,4 +1,12 @@
-DROP TABLE Atleta
+/* deleta o bd
+
+drop table Equipe;
+drop table Desempenho;
+drop table Treino;
+drop table Treinador;
+drop table Atleta;
+*/
+
 
 CREATE TABLE Treinador(
 	nome VARCHAR(45) NOT NULL,
@@ -8,20 +16,6 @@ CREATE TABLE Treinador(
 	PRIMARY KEY(cpf)
 );
 
-CREATE TABLE Treino(
-	id_treino INT NOT NULL,
-	intencidade VARCHAR(20) NULL,
-	modalidade VARCHAR(30) NULL,
-	exercicios VARCHAR(250) NOT NULL,
-	PRIMARY KEY(id_treino)
-);
-CREATE TABLE Desempenho(
-	id_atleta int NOT NULL,
-	nivel VARCHAR(30) NULL,
-	relatorio VARCHAR(300) NOT NULL,
-	primary key(id_atleta)
-);
-
 CREATE TABLE Atleta(
 	nome VARCHAR(45) NOT NULL,
 	idade INT NULL,
@@ -29,13 +23,29 @@ CREATE TABLE Atleta(
 	peso FLOAT NOT NULL,
 	altura FLOAT NOT NULL,
 	categoria VARCHAR(45) NOT NULL,
-	treino_id int NOT NULL,
-	PRIMARY KEY(cpf),
-	FOREIGN KEY(treino_id) REFERENCES Treino(id_treino)
+	PRIMARY KEY(cpf)
+);
+
+CREATE TABLE Treino(
+	id_treino_atleta VARCHAR NOT NULL,
+	intencidade VARCHAR(20) NULL,
+	modalidade VARCHAR(30) NULL,
+	exercicios VARCHAR(250) NOT NULL,
+	PRIMARY KEY(id_treino_atleta),
+	FOREIGN KEY(id_treino_atleta ) REFERENCES Atleta(cpf)
+);
+
+
+CREATE TABLE Desempenho(
+	id_atleta VARCHAR NOT NULL,
+	nivel VARCHAR(30) NULL,
+	relatorio VARCHAR(300) NOT NULL,
+	primary key(id_atleta),
+	FOREIGN KEY (id_atleta) REFERENCES Atleta(cpf)
 );
 
 CREATE TABLE Equipe(
-	codigo INT NOT NULL,
+	ID SERIAL NOT NULL,
 	nome VARCHAR(45) NOT NULL,
 	atleta1 VARCHAR(11) NULL,
 	atleta2 VARCHAR(11) NULL,
@@ -44,7 +54,7 @@ CREATE TABLE Equipe(
 	atleta5 VARCHAR(11) NULL,
 	treinador VARCHAR(11) NOT NULL,
 	Competicoes VARCHAR(45) NULL,
-	PRIMARY KEY(codigo),
+	PRIMARY KEY(ID),
 	FOREIGN KEY(treinador) REFERENCES Treinador(cpf),
 	FOREIGN KEY(atleta1) REFERENCES Atleta(cpf),
 	FOREIGN KEY(atleta2) REFERENCES Atleta(cpf),

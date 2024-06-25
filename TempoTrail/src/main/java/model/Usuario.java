@@ -8,9 +8,9 @@ package model;
  *
  * @author gabri
  */
-public class Usuario {
+public abstract class Usuario {
     public String nome;
-    public int idade;
+    public String idade;
     public String cpf;
 
     public String getNome() {
@@ -21,11 +21,11 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public int getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(int idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 

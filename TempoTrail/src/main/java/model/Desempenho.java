@@ -9,7 +9,8 @@ package model;
  * @author gabri
  */
 public class Desempenho {
-
+    public String nivel;
+    
     public String getNivel() {
         return nivel;
     }
@@ -17,5 +18,4 @@ public class Desempenho {
     public void setNivel(String nivel) {
         this.nivel = nivel;
     }
-    public String nivel;
 }
