@@ -34,7 +34,7 @@ public class LoginAtleta extends javax.swing.JFrame {
         JtCpfAtleta = new javax.swing.JTextField();
         JbLoginAtleta = new javax.swing.JButton();
         JbCadastroAtleta = new javax.swing.JButton();
-        JbTreinador = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -76,17 +76,7 @@ public class LoginAtleta extends javax.swing.JFrame {
             }
         });
 
-        JbTreinador.setText("Treinador");
-        JbTreinador.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                JbTreinadorMouseClicked(evt);
-            }
-        });
-        JbTreinador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JbTreinadorActionPerformed(evt);
-            }
-        });
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Atleta", "Treinador" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -102,23 +92,21 @@ public class LoginAtleta extends javax.swing.JFrame {
                         .addComponent(JlIdade)
                         .addGap(1, 1, 1)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(JbLoginAtleta)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(JbCadastroAtleta))
-                    .addComponent(JtNomeAtleta, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JtIdadeAtleta, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JtCpfAtleta, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox1, 0, 245, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(JbLoginAtleta)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(JbCadastroAtleta))
+                        .addComponent(JtNomeAtleta, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                        .addComponent(JtIdadeAtleta, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                        .addComponent(JtCpfAtleta, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)))
                 .addContainerGap(85, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(JbTreinador))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(JbTreinador)
-                .addGap(28, 28, 28)
+                .addGap(51, 51, 51)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JlNome)
                     .addComponent(JtNomeAtleta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -130,11 +118,13 @@ public class LoginAtleta extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JlCPF)
                     .addComponent(JtCpfAtleta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
+                .addGap(18, 18, 18)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JbLoginAtleta)
                     .addComponent(JbCadastroAtleta))
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
 
         pack();
@@ -153,17 +143,8 @@ public class LoginAtleta extends javax.swing.JFrame {
     }//GEN-LAST:event_JtCpfAtletaActionPerformed
 
     private void JbCadastroAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbCadastroAtletaActionPerformed
-        new Principal().setVisible(true);
+        new Cadastro().setVisible(true);
     }//GEN-LAST:event_JbCadastroAtletaActionPerformed
-
-    private void JbTreinadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JbTreinadorMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JbTreinadorMouseClicked
-
-    private void JbTreinadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbTreinadorActionPerformed
-        new LoginTreinador().setVisible(true);
-        
-    }//GEN-LAST:event_JbTreinadorActionPerformed
 
     private void JbLoginAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbLoginAtletaActionPerformed
         new Principal().setVisible(true);
@@ -208,12 +189,12 @@ public class LoginAtleta extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JbCadastroAtleta;
     private javax.swing.JButton JbLoginAtleta;
-    private javax.swing.JButton JbTreinador;
     private javax.swing.JLabel JlCPF;
     private javax.swing.JLabel JlIdade;
     private javax.swing.JLabel JlNome;
     private javax.swing.JTextField JtCpfAtleta;
     private javax.swing.JTextField JtIdadeAtleta;
     private javax.swing.JTextField JtNomeAtleta;
+    private javax.swing.JComboBox<String> jComboBox1;
     // End of variables declaration//GEN-END:variables
 }
