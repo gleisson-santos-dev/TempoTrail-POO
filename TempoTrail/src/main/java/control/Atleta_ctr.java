@@ -31,7 +31,7 @@ public class Atleta_ctr {
             ps.setInt(2,a1.getIdade());
             ps.setString(3,a1.getCpf());
             ps.setFloat(4,a1.getPeso());
-            ps.setFloat(5,a1.getAltura());
+            ps.setDouble(5,a1.getAltura());
             ps.setString(6,a1.getCategoria());
             ps.execute();
             ps.close();
@@ -44,10 +44,10 @@ public class Atleta_ctr {
     
     public static void main(String args []){
         Atleta a1 = new Atleta();
-        a1.setNome("gustavo");
+        a1.setNome("pluto");
         a1.setIdade(18);
-        a1.setAltura(165);
-        a1.setCpf("12345678911");
+        a1.setAltura(160);
+        a1.setCpf("12345678912");
         a1.setPeso(70);
         a1.setCategoria("corrida");
         

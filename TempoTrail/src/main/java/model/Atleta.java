@@ -10,7 +10,7 @@ package model;
  */
 public class Atleta extends Usuario{
     public float peso;
-    public float altura;
+    public double altura;
     public String categoria;
     
     public float getPeso() {
@@ -21,7 +21,7 @@ public class Atleta extends Usuario{
         this.peso = peso;
     }
 
-    public float getAltura() {
+    public double getAltura() {
         return altura;
     }
 
