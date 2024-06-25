@@ -26,10 +26,9 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="CbAtletatreinador" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="JlIdade" min="-2" max="-2" attributes="0"/>
+                          <Component id="JlIdade" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="JlCpf" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="JlNome" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -56,17 +55,15 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="JtIdade" min="-2" max="-2" attributes="0"/>
-                  <Component id="JlIdade" min="-2" max="-2" attributes="0"/>
+                  <Component id="JtIdade" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="JlIdade" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="JtCpf" min="-2" max="-2" attributes="0"/>
-                  <Component id="JlCpf" min="-2" max="-2" attributes="0"/>
+                  <Component id="JtCpf" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="JlCpf" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-              <Component id="CbAtletatreinador" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
               <Component id="JbCadastrar" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
           </Group>
@@ -106,22 +103,6 @@
     <Component class="javax.swing.JTextField" name="JtIdade">
     </Component>
     <Component class="javax.swing.JTextField" name="JtCpf">
-    </Component>
-    <Component class="javax.swing.JComboBox" name="CbAtletatreinador">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="18" style="1"/>
-        </Property>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="2">
-            <StringItem index="0" value="Atleta"/>
-            <StringItem index="1" value="Treinador"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="JbCadastrar">
       <Properties>

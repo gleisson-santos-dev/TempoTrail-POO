@@ -23,13 +23,173 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="JlPeso" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="JlAltura" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="JlCategoria" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="JlTempo" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="JlDistancia" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="JlVelocidade" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="JlAlturacategoria" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="JtPeso" alignment="0" max="32767" attributes="0"/>
+                  <Component id="JtAltura" alignment="0" max="32767" attributes="0"/>
+                  <Component id="JcbCategoria" alignment="0" pref="109" max="32767" attributes="0"/>
+                  <Component id="JtTempo" alignment="0" max="32767" attributes="0"/>
+                  <Component id="JtDistancia" alignment="0" max="32767" attributes="0"/>
+                  <Component id="JtAlturacategoria" max="32767" attributes="0"/>
+                  <Component id="JtVelocidade" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="JbDesempenho" max="32767" attributes="0"/>
+                  <Component id="JbAdicionar" max="32767" attributes="0"/>
+                  <Component id="JbVoltar" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="JlPeso" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JtPeso" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JbAdicionar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="JtAltura" min="-2" max="-2" attributes="0"/>
+                  <Component id="JlAltura" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="JcbCategoria" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JlCategoria" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JbDesempenho" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="JlTempo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="JtTempo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Component id="JbVoltar" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="JtDistancia" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JlDistancia" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="JtAlturacategoria" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JlAlturacategoria" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="JlVelocidade" min="-2" max="-2" attributes="0"/>
+                  <Component id="JtVelocidade" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="17" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="JlPeso">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Peso:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JlAltura">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Altura Atleta:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JlCategoria">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Categoria:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JlTempo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tempo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JlDistancia">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Distancia:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JlAlturacategoria">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Altura de salto:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JlVelocidade">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Velocidade:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="JtPeso">
+    </Component>
+    <Component class="javax.swing.JTextField" name="JtAltura">
+    </Component>
+    <Component class="javax.swing.JTextField" name="JtTempo">
+    </Component>
+    <Component class="javax.swing.JTextField" name="JtDistancia">
+    </Component>
+    <Component class="javax.swing.JTextField" name="JtAlturacategoria">
+    </Component>
+    <Component class="javax.swing.JTextField" name="JtVelocidade">
+    </Component>
+    <Component class="javax.swing.JComboBox" name="JcbCategoria">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Item 1"/>
+            <StringItem index="1" value="Item 2"/>
+            <StringItem index="2" value="Item 3"/>
+            <StringItem index="3" value="Item 4"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="JbAdicionar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Adicionar Resultado"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="JbDesempenho">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Desempenho"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JbDesempenhoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="JbVoltar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Voltar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JbVoltarActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
 </Form>

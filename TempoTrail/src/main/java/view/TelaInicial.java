@@ -8,12 +8,12 @@ package view;
  *
  * @author gabri
  */
-public class Desempenho extends javax.swing.JFrame {
+public class TelaInicial extends javax.swing.JFrame {
 
     /**
-     * Creates new form Desempenho
+     * Creates new form TelaInicial
      */
-    public Desempenho() {
+    public TelaInicial() {
         initComponents();
     }
 
@@ -26,29 +26,25 @@ public class Desempenho extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        JbVoltar = new javax.swing.JButton();
+        JlTitulo = new javax.swing.JLabel();
+        JbAtleta = new javax.swing.JButton();
+        JbTreinador = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
+        JlTitulo.setText("TempoTrail");
 
-        JbVoltar.setText("Voltar");
-        JbVoltar.addActionListener(new java.awt.event.ActionListener() {
+        JbAtleta.setText("Atleta");
+        JbAtleta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JbVoltarActionPerformed(evt);
+                JbAtletaActionPerformed(evt);
+            }
+        });
+
+        JbTreinador.setText("Treinador");
+        JbTreinador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JbTreinadorActionPerformed(evt);
             }
         });
 
@@ -57,28 +53,38 @@ public class Desempenho extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 83, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addComponent(JbAtleta)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addComponent(JbTreinador)
+                .addGap(26, 26, 26))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(JbVoltar)
+                .addGap(97, 97, 97)
+                .addComponent(JlTitulo)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(JbVoltar)
-                .addGap(0, 15, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(JlTitulo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JbAtleta)
+                    .addComponent(JbTreinador, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(52, 52, 52))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JbVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbVoltarActionPerformed
-        new Principal().setVisible(true);
-    }//GEN-LAST:event_JbVoltarActionPerformed
+    private void JbAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbAtletaActionPerformed
+        new LoginAtleta().setVisible(true);
+    }//GEN-LAST:event_JbAtletaActionPerformed
+
+    private void JbTreinadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbTreinadorActionPerformed
+        new LoginTreinador().setVisible(true);
+    }//GEN-LAST:event_JbTreinadorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -97,27 +103,27 @@ public class Desempenho extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Desempenho.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Desempenho.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Desempenho.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Desempenho.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Desempenho().setVisible(true);
+                new TelaInicial().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton JbVoltar;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JButton JbAtleta;
+    private javax.swing.JButton JbTreinador;
+    private javax.swing.JLabel JlTitulo;
     // End of variables declaration//GEN-END:variables
 }

@@ -27,8 +27,8 @@
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                      <Component id="JlCPF" min="-2" max="-2" attributes="0"/>
-                      <Component id="JlNome" min="-2" max="-2" attributes="0"/>
+                      <Component id="JlCPF" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="JlNome" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="JlIdade" min="-2" max="-2" attributes="0"/>
@@ -36,14 +36,14 @@
                   </Group>
               </Group>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="JbLoginAtleta" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="JbLoginTreinador" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="JbCadastroAtleta" min="-2" max="-2" attributes="0"/>
+                      <Component id="JbCadastroTreinador" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="JtNomeAtleta" pref="245" max="32767" attributes="0"/>
-                  <Component id="JtIdadeAtleta" alignment="0" pref="245" max="32767" attributes="0"/>
-                  <Component id="JtCpfAtleta" pref="245" max="32767" attributes="0"/>
+                  <Component id="JtNomeTreinador" alignment="0" pref="245" max="32767" attributes="0"/>
+                  <Component id="JtIdadeTreinador" alignment="0" pref="245" max="32767" attributes="0"/>
+                  <Component id="JtCpfTreinador" alignment="0" pref="245" max="32767" attributes="0"/>
               </Group>
               <EmptySpace pref="85" max="32767" attributes="0"/>
           </Group>
@@ -55,22 +55,22 @@
               <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="JlNome" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="JtNomeAtleta" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JtNomeTreinador" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="JlIdade" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="JtIdadeAtleta" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JtIdadeTreinador" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="JlCPF" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="JtCpfAtleta" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JtCpfTreinador" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="JbLoginAtleta" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="JbCadastroAtleta" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JbLoginTreinador" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JbCadastroTreinador" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="67" max="32767" attributes="0"/>
           </Group>
@@ -93,35 +93,35 @@
         <Property name="text" type="java.lang.String" value="CPF:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="JtNomeAtleta">
+    <Component class="javax.swing.JTextField" name="JtNomeTreinador">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JtNomeAtletaActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JtNomeTreinadorActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="JtIdadeAtleta">
+    <Component class="javax.swing.JTextField" name="JtIdadeTreinador">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JtIdadeAtletaActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JtIdadeTreinadorActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="JtCpfAtleta">
+    <Component class="javax.swing.JTextField" name="JtCpfTreinador">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JtCpfAtletaActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JtCpfTreinadorActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="JbLoginAtleta">
+    <Component class="javax.swing.JButton" name="JbLoginTreinador">
       <Properties>
-        <Property name="text" type="java.lang.String" value=" Login Atleta"/>
+        <Property name="text" type="java.lang.String" value=" Login Treinador"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JbLoginAtletaActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JbLoginTreinadorActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="JbCadastroAtleta">
+    <Component class="javax.swing.JButton" name="JbCadastroTreinador">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cadastro"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JbCadastroAtletaActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JbCadastroTreinadorActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

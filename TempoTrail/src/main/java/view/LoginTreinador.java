@@ -8,12 +8,12 @@ package view;
  *
  * @author gabri
  */
-public class LoginAtleta extends javax.swing.JFrame {
+public class LoginTreinador extends javax.swing.JFrame {
 
     /**
-     * Creates new form Login
+     * Creates new form LoginTreinador
      */
-    public LoginAtleta() {
+    public LoginTreinador() {
         initComponents();
     }
 
@@ -29,11 +29,11 @@ public class LoginAtleta extends javax.swing.JFrame {
         JlNome = new javax.swing.JLabel();
         JlIdade = new javax.swing.JLabel();
         JlCPF = new javax.swing.JLabel();
-        JtNomeAtleta = new javax.swing.JTextField();
-        JtIdadeAtleta = new javax.swing.JTextField();
-        JtCpfAtleta = new javax.swing.JTextField();
-        JbLoginAtleta = new javax.swing.JButton();
-        JbCadastroAtleta = new javax.swing.JButton();
+        JtNomeTreinador = new javax.swing.JTextField();
+        JtIdadeTreinador = new javax.swing.JTextField();
+        JtCpfTreinador = new javax.swing.JTextField();
+        JbLoginTreinador = new javax.swing.JButton();
+        JbCadastroTreinador = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,35 +43,35 @@ public class LoginAtleta extends javax.swing.JFrame {
 
         JlCPF.setText("CPF:");
 
-        JtNomeAtleta.addActionListener(new java.awt.event.ActionListener() {
+        JtNomeTreinador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JtNomeAtletaActionPerformed(evt);
+                JtNomeTreinadorActionPerformed(evt);
             }
         });
 
-        JtIdadeAtleta.addActionListener(new java.awt.event.ActionListener() {
+        JtIdadeTreinador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JtIdadeAtletaActionPerformed(evt);
+                JtIdadeTreinadorActionPerformed(evt);
             }
         });
 
-        JtCpfAtleta.addActionListener(new java.awt.event.ActionListener() {
+        JtCpfTreinador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JtCpfAtletaActionPerformed(evt);
+                JtCpfTreinadorActionPerformed(evt);
             }
         });
 
-        JbLoginAtleta.setText(" Login Atleta");
-        JbLoginAtleta.addActionListener(new java.awt.event.ActionListener() {
+        JbLoginTreinador.setText(" Login Treinador");
+        JbLoginTreinador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JbLoginAtletaActionPerformed(evt);
+                JbLoginTreinadorActionPerformed(evt);
             }
         });
 
-        JbCadastroAtleta.setText("Cadastro");
-        JbCadastroAtleta.addActionListener(new java.awt.event.ActionListener() {
+        JbCadastroTreinador.setText("Cadastro");
+        JbCadastroTreinador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JbCadastroAtletaActionPerformed(evt);
+                JbCadastroTreinadorActionPerformed(evt);
             }
         });
 
@@ -90,12 +90,12 @@ public class LoginAtleta extends javax.swing.JFrame {
                         .addGap(1, 1, 1)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(JbLoginAtleta)
+                        .addComponent(JbLoginTreinador)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(JbCadastroAtleta))
-                    .addComponent(JtNomeAtleta, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
-                    .addComponent(JtIdadeAtleta, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
-                    .addComponent(JtCpfAtleta, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE))
+                        .addComponent(JbCadastroTreinador))
+                    .addComponent(JtNomeTreinador, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                    .addComponent(JtIdadeTreinador, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                    .addComponent(JtCpfTreinador, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE))
                 .addContainerGap(85, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -104,44 +104,44 @@ public class LoginAtleta extends javax.swing.JFrame {
                 .addGap(51, 51, 51)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JlNome)
-                    .addComponent(JtNomeAtleta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JtNomeTreinador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JlIdade)
-                    .addComponent(JtIdadeAtleta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JtIdadeTreinador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JlCPF)
-                    .addComponent(JtCpfAtleta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JtCpfTreinador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(69, 69, 69)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JbLoginAtleta)
-                    .addComponent(JbCadastroAtleta))
+                    .addComponent(JbLoginTreinador)
+                    .addComponent(JbCadastroTreinador))
                 .addContainerGap(67, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JtNomeAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JtNomeAtletaActionPerformed
+    private void JtNomeTreinadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JtNomeTreinadorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JtNomeAtletaActionPerformed
+    }//GEN-LAST:event_JtNomeTreinadorActionPerformed
 
-    private void JtIdadeAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JtIdadeAtletaActionPerformed
+    private void JtIdadeTreinadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JtIdadeTreinadorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JtIdadeAtletaActionPerformed
+    }//GEN-LAST:event_JtIdadeTreinadorActionPerformed
 
-    private void JtCpfAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JtCpfAtletaActionPerformed
+    private void JtCpfTreinadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JtCpfTreinadorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JtCpfAtletaActionPerformed
+    }//GEN-LAST:event_JtCpfTreinadorActionPerformed
 
-    private void JbCadastroAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbCadastroAtletaActionPerformed
-        new Cadastroatleta().setVisible(true);
-    }//GEN-LAST:event_JbCadastroAtletaActionPerformed
-
-    private void JbLoginAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbLoginAtletaActionPerformed
+    private void JbLoginTreinadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbLoginTreinadorActionPerformed
         new Principal().setVisible(true);
-    }//GEN-LAST:event_JbLoginAtletaActionPerformed
+    }//GEN-LAST:event_JbLoginTreinadorActionPerformed
+
+    private void JbCadastroTreinadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbCadastroTreinadorActionPerformed
+        new Cadastrotreinador().setVisible(true);
+    }//GEN-LAST:event_JbCadastroTreinadorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,33 +160,32 @@ public class LoginAtleta extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LoginAtleta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginTreinador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LoginAtleta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginTreinador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LoginAtleta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginTreinador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LoginAtleta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginTreinador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LoginAtleta().setVisible(true);
+                new LoginTreinador().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton JbCadastroAtleta;
-    private javax.swing.JButton JbLoginAtleta;
+    private javax.swing.JButton JbCadastroTreinador;
+    private javax.swing.JButton JbLoginTreinador;
     private javax.swing.JLabel JlCPF;
     private javax.swing.JLabel JlIdade;
     private javax.swing.JLabel JlNome;
-    private javax.swing.JTextField JtCpfAtleta;
-    private javax.swing.JTextField JtIdadeAtleta;
-    private javax.swing.JTextField JtNomeAtleta;
+    private javax.swing.JTextField JtCpfTreinador;
+    private javax.swing.JTextField JtIdadeTreinador;
+    private javax.swing.JTextField JtNomeTreinador;
     // End of variables declaration//GEN-END:variables
 }

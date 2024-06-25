@@ -8,12 +8,12 @@ package view;
  *
  * @author gabri
  */
-public class Cadastro extends javax.swing.JFrame {
+public class Cadastrotreinador extends javax.swing.JFrame {
 
     /**
-     * Creates new form Cadastro
+     * Creates new form Cadastrotreinador
      */
-    public Cadastro() {
+    public Cadastrotreinador() {
         initComponents();
     }
 
@@ -32,7 +32,6 @@ public class Cadastro extends javax.swing.JFrame {
         JtNome = new javax.swing.JTextField();
         JtIdade = new javax.swing.JTextField();
         JtCpf = new javax.swing.JTextField();
-        CbAtletatreinador = new javax.swing.JComboBox<>();
         JbCadastrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -52,9 +51,6 @@ public class Cadastro extends javax.swing.JFrame {
             }
         });
 
-        CbAtletatreinador.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        CbAtletatreinador.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Atleta", "Treinador" }));
-
         JbCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         JbCadastrar.setText("Cadastrar");
         JbCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -70,7 +66,6 @@ public class Cadastro extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CbAtletatreinador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(JlIdade)
@@ -99,9 +94,7 @@ public class Cadastro extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(JtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JlCpf))
-                .addGap(32, 32, 32)
-                .addComponent(CbAtletatreinador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
+                .addGap(106, 106, 106)
                 .addComponent(JbCadastrar)
                 .addGap(47, 47, 47))
         );
@@ -114,7 +107,7 @@ public class Cadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_JtNomeActionPerformed
 
     private void JbCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbCadastrarActionPerformed
-        new LoginAtleta().setVisible(true);
+        new LoginTreinador().setVisible(true);
     }//GEN-LAST:event_JbCadastrarActionPerformed
 
     /**
@@ -134,26 +127,25 @@ public class Cadastro extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cadastrotreinador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cadastrotreinador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cadastrotreinador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cadastrotreinador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Cadastro().setVisible(true);
+                new Cadastrotreinador().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> CbAtletatreinador;
     private javax.swing.JButton JbCadastrar;
     private javax.swing.JLabel JlCpf;
     private javax.swing.JLabel JlIdade;

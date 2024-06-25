@@ -26,21 +26,139 @@ public class Atleta extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        JlPeso = new javax.swing.JLabel();
+        JlAltura = new javax.swing.JLabel();
+        JlCategoria = new javax.swing.JLabel();
+        JlTempo = new javax.swing.JLabel();
+        JlDistancia = new javax.swing.JLabel();
+        JlAlturacategoria = new javax.swing.JLabel();
+        JlVelocidade = new javax.swing.JLabel();
+        JtPeso = new javax.swing.JTextField();
+        JtAltura = new javax.swing.JTextField();
+        JtTempo = new javax.swing.JTextField();
+        JtDistancia = new javax.swing.JTextField();
+        JtAlturacategoria = new javax.swing.JTextField();
+        JtVelocidade = new javax.swing.JTextField();
+        JcbCategoria = new javax.swing.JComboBox<>();
+        JbAdicionar = new javax.swing.JButton();
+        JbDesempenho = new javax.swing.JButton();
+        JbVoltar = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        JlPeso.setText("Peso:");
+
+        JlAltura.setText("Altura Atleta:");
+
+        JlCategoria.setText("Categoria:");
+
+        JlTempo.setText("Tempo:");
+
+        JlDistancia.setText("Distancia:");
+
+        JlAlturacategoria.setText("Altura de salto:");
+
+        JlVelocidade.setText("Velocidade:");
+
+        JcbCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        JbAdicionar.setText("Adicionar Resultado");
+
+        JbDesempenho.setText("Desempenho");
+        JbDesempenho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JbDesempenhoActionPerformed(evt);
+            }
+        });
+
+        JbVoltar.setText("Voltar");
+        JbVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JbVoltarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JlPeso)
+                    .addComponent(JlAltura)
+                    .addComponent(JlCategoria)
+                    .addComponent(JlTempo)
+                    .addComponent(JlDistancia)
+                    .addComponent(JlVelocidade)
+                    .addComponent(JlAlturacategoria))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JtPeso)
+                    .addComponent(JtAltura)
+                    .addComponent(JcbCategoria, 0, 109, Short.MAX_VALUE)
+                    .addComponent(JtTempo)
+                    .addComponent(JtDistancia)
+                    .addComponent(JtAlturacategoria)
+                    .addComponent(JtVelocidade))
+                .addGap(12, 12, 12)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(JbDesempenho, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(JbAdicionar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(JbVoltar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(67, 67, 67))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JlPeso)
+                    .addComponent(JtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JbAdicionar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JlAltura))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JcbCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JlCategoria)
+                    .addComponent(JbDesempenho))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(JlTempo)
+                            .addComponent(JtTempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(JbVoltar)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JtDistancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JlDistancia))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JtAlturacategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JlAlturacategoria))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JlVelocidade)
+                    .addComponent(JtVelocidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void JbDesempenhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbDesempenhoActionPerformed
+        new Desempenho().setVisible(true);
+    }//GEN-LAST:event_JbDesempenhoActionPerformed
+
+    private void JbVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbVoltarActionPerformed
+        new Principal().setVisible(true);
+    }//GEN-LAST:event_JbVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +196,22 @@ public class Atleta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JbAdicionar;
+    private javax.swing.JButton JbDesempenho;
+    private javax.swing.JButton JbVoltar;
+    private javax.swing.JComboBox<String> JcbCategoria;
+    private javax.swing.JLabel JlAltura;
+    private javax.swing.JLabel JlAlturacategoria;
+    private javax.swing.JLabel JlCategoria;
+    private javax.swing.JLabel JlDistancia;
+    private javax.swing.JLabel JlPeso;
+    private javax.swing.JLabel JlTempo;
+    private javax.swing.JLabel JlVelocidade;
+    private javax.swing.JTextField JtAltura;
+    private javax.swing.JTextField JtAlturacategoria;
+    private javax.swing.JTextField JtDistancia;
+    private javax.swing.JTextField JtPeso;
+    private javax.swing.JTextField JtTempo;
+    private javax.swing.JTextField JtVelocidade;
     // End of variables declaration//GEN-END:variables
 }
