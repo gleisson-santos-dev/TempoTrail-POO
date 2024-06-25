@@ -29,11 +29,13 @@ public class LoginTreinador extends javax.swing.JFrame {
         JlNome = new javax.swing.JLabel();
         JlIdade = new javax.swing.JLabel();
         JlCPF = new javax.swing.JLabel();
+        JlFormacao = new javax.swing.JLabel();
         JtNomeTreinador = new javax.swing.JTextField();
         JtIdadeTreinador = new javax.swing.JTextField();
         JtCpfTreinador = new javax.swing.JTextField();
         JbLoginTreinador = new javax.swing.JButton();
         JbCadastroTreinador = new javax.swing.JButton();
+        JtFormacao = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -42,6 +44,8 @@ public class LoginTreinador extends javax.swing.JFrame {
         JlIdade.setText("Idade:");
 
         JlCPF.setText("CPF:");
+
+        JlFormacao.setText("Formação:");
 
         JtNomeTreinador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,13 +85,16 @@ public class LoginTreinador extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(JlCPF)
-                        .addComponent(JlNome))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(JlIdade)
-                        .addGap(1, 1, 1)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JlCPF)
+                            .addComponent(JlNome))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(JlIdade)
+                            .addGap(1, 1, 1)))
+                    .addComponent(JlFormacao))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(JbLoginTreinador)
@@ -95,8 +102,9 @@ public class LoginTreinador extends javax.swing.JFrame {
                         .addComponent(JbCadastroTreinador))
                     .addComponent(JtNomeTreinador, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
                     .addComponent(JtIdadeTreinador, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
-                    .addComponent(JtCpfTreinador, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE))
-                .addContainerGap(85, Short.MAX_VALUE))
+                    .addComponent(JtCpfTreinador, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                    .addComponent(JtFormacao))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,7 +121,11 @@ public class LoginTreinador extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JlCPF)
                     .addComponent(JtCpfTreinador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(69, 69, 69)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JtFormacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JlFormacao))
+                .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JbLoginTreinador)
                     .addComponent(JbCadastroTreinador))
@@ -182,9 +194,11 @@ public class LoginTreinador extends javax.swing.JFrame {
     private javax.swing.JButton JbCadastroTreinador;
     private javax.swing.JButton JbLoginTreinador;
     private javax.swing.JLabel JlCPF;
+    private javax.swing.JLabel JlFormacao;
     private javax.swing.JLabel JlIdade;
     private javax.swing.JLabel JlNome;
     private javax.swing.JTextField JtCpfTreinador;
+    private javax.swing.JTextField JtFormacao;
     private javax.swing.JTextField JtIdadeTreinador;
     private javax.swing.JTextField JtNomeTreinador;
     // End of variables declaration//GEN-END:variables

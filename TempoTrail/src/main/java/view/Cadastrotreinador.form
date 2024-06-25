@@ -26,20 +26,22 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="JbCadastrar" alignment="0" min="-2" pref="339" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="JlIdade" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="JlCpf" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="JlNome" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="JlFormacao" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="JtCpf" alignment="0" pref="260" max="32767" attributes="0"/>
                           <Component id="JtIdade" alignment="0" max="32767" attributes="0"/>
                           <Component id="JtNome" alignment="0" max="32767" attributes="0"/>
+                          <Component id="JtFormacao" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="JbCadastrar" alignment="0" min="-2" pref="339" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="39" max="32767" attributes="0"/>
           </Group>
@@ -63,7 +65,12 @@
                   <Component id="JtCpf" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="JlCpf" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="JlFormacao" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JtFormacao" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
               <Component id="JbCadastrar" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
           </Group>
@@ -114,6 +121,16 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JbCadastrarActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JlFormacao">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Forma&#xe7;&#xe3;o:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="JtFormacao">
     </Component>
   </SubComponents>
 </Form>

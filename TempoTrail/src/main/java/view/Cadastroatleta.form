@@ -26,6 +26,19 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="JlPeso" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="JlAltura" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="JlCategoria" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="JtAltura" max="32767" attributes="0"/>
+                          <Component id="JcbCategoria" pref="235" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="JbCadastrar" alignment="0" min="-2" pref="339" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="JlIdade" min="-2" max="-2" attributes="0"/>
@@ -33,15 +46,17 @@
                           <Component id="JlNome" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="JtCpfAtleta" alignment="0" pref="260" max="32767" attributes="0"/>
-                          <Component id="JtIdadeAtleta" alignment="0" max="32767" attributes="0"/>
-                          <Component id="JtNomeAtleta" alignment="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="JtPeso" alignment="0" min="-2" pref="260" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="JtCpfAtleta" alignment="0" pref="260" max="32767" attributes="0"/>
+                              <Component id="JtIdadeAtleta" alignment="0" max="32767" attributes="0"/>
+                              <Component id="JtNomeAtleta" alignment="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
-                  <Component id="JbCadastrar" alignment="0" min="-2" pref="339" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="39" max="32767" attributes="0"/>
+              <EmptySpace pref="50" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -63,7 +78,22 @@
                   <Component id="JtCpfAtleta" min="-2" max="-2" attributes="0"/>
                   <Component id="JlCpf" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="JlPeso" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JtPeso" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="JtAltura" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="JlAltura" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="JcbCategoria" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JlCategoria" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
               <Component id="JbCadastrar" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
           </Group>
@@ -114,6 +144,40 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JbCadastrarActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JlPeso">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Peso:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JlAltura">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Altura Atleta:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JlCategoria">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Categoria:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="JcbCategoria">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Item 1"/>
+            <StringItem index="1" value="Item 2"/>
+            <StringItem index="2" value="Item 3"/>
+            <StringItem index="3" value="Item 4"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JTextField" name="JtPeso">
+    </Component>
+    <Component class="javax.swing.JTextField" name="JtAltura">
     </Component>
   </SubComponents>
 </Form>
