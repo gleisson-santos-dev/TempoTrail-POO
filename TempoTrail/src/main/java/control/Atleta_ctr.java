@@ -4,6 +4,8 @@ package control;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import model.Atleta;
 
 public class Atleta_ctr {
@@ -41,6 +43,51 @@ public class Atleta_ctr {
         catch(Exception ex){
             System.out.println(ex);
         }
+    }
+    
+    public Atleta info_atleta_login(Atleta a1){
+        Atleta a2 = new Atleta();
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        Statement st =null;
+        
+        
+        String sql = "SELECT nome, cpf, senha FROM Atleta";
+         try{
+            Class.forName(driver);
+        }
+        catch(Exception ex){
+            System.out.println(ex);
+        }
+        try{
+            conn = DriverManager.getConnection(url,user,senha);
+            st = conn.createStatement();
+            rs = st.executeQuery(sql);
+            String cpf, nome, senha;
+            
+            cpf = a1.getCpf();
+            nome = a1.getNome();
+            senha = a1.getSenha();
+            while(rs.next()){
+                if(cpf == rs.getString(2) && nome == rs.getString(1) && senha == rs.getString(3)){
+                    a2.setNome(rs.getString(1));
+                    a2.setSenha(rs.getString(3));
+                    a2.setCpf(rs.getString(2));
+                }
+                else{
+                    return a2 = null;
+                }
+                System.out.println("nome "+ rs.getString(1));
+                System.out.println("cpf "+ rs.getString(2));
+                System.out.println("senha "+ rs.getString(3));
+            }
+            
+        } 
+         catch(Exception ex){
+            System.out.println(ex);
+        }
+        return a2;
     }
     
 

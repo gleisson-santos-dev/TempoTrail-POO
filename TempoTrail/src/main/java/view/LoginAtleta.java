@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package view;
+import model.Atleta;
+import control.Atleta_ctr;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -34,23 +37,17 @@ public class LoginAtleta extends javax.swing.JFrame {
     private void initComponents() {
 
         JlNome = new javax.swing.JLabel();
-        JlIdade = new javax.swing.JLabel();
         JlCPF = new javax.swing.JLabel();
         JtNomeAtleta = new javax.swing.JTextField();
-        JtIdadeAtleta = new javax.swing.JTextField();
         JtCpfAtleta = new javax.swing.JTextField();
-        JbLoginAtleta = new javax.swing.JButton();
+        jlSenha = new javax.swing.JButton();
         JbCadastroAtleta = new javax.swing.JButton();
-        JlPeso = new javax.swing.JLabel();
-        JlAltura = new javax.swing.JLabel();
-        JlCategoria = new javax.swing.JLabel();
-        JtPeso = new javax.swing.JTextField();
-        JtAltura = new javax.swing.JTextField();
-        Jtategoria = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        JtSenha = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
 
         JlNome.setText("Nome:");
-
-        JlIdade.setText("Idade:");
 
         JlCPF.setText("CPF:");
 
@@ -60,112 +57,92 @@ public class LoginAtleta extends javax.swing.JFrame {
             }
         });
 
-        JtIdadeAtleta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JtIdadeAtletaActionPerformed(evt);
-            }
-        });
-
         JtCpfAtleta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JtCpfAtletaActionPerformed(evt);
             }
         });
 
-        JbLoginAtleta.setText(" Login Atleta");
-        JbLoginAtleta.addActionListener(new java.awt.event.ActionListener() {
+        jlSenha.setText("LOGIN");
+        jlSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JbLoginAtletaActionPerformed(evt);
+                jlSenhaActionPerformed(evt);
             }
         });
 
-        JbCadastroAtleta.setText("Cadastro");
+        JbCadastroAtleta.setText("CADASTRAR");
         JbCadastroAtleta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JbCadastroAtletaActionPerformed(evt);
             }
         });
 
-        JlPeso.setText("Peso:");
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel1.setText("Login Atleta");
 
-        JlAltura.setText("Altura Atleta:");
+        jLabel2.setText("Senha");
 
-        JlCategoria.setText("Categoria:");
+        jLabel3.setText("Não tem conta ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(JbLoginAtleta)
-                .addGap(71, 71, 71)
-                .addComponent(JbCadastroAtleta)
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(JlCPF)
+                        .addGap(48, 48, 48)
+                        .addComponent(JtCpfAtleta, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JlNome))
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(JtNomeAtleta, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                            .addComponent(JtSenha))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(JlCPF)
-                        .addComponent(JlNome))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(JlIdade)
-                        .addGap(1, 1, 1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Jtategoria, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(JtNomeAtleta)
-                        .addComponent(JtIdadeAtleta)
-                        .addComponent(JtCpfAtleta)
-                        .addComponent(JtPeso, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)))
-                .addGap(30, 30, 30))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(39, 39, 39)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(JlPeso)
-                        .addComponent(JlAltura)
-                        .addComponent(JlCategoria))
-                    .addGap(18, 18, 18)
-                    .addComponent(JtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(31, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(133, 133, 133))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jlSenha)
+                        .addGap(147, 147, 147))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel3)
+                            .addComponent(JbCadastroAtleta))
+                        .addGap(137, 137, 137))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JlNome)
                     .addComponent(JtNomeAtleta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JlIdade)
-                    .addComponent(JtIdadeAtleta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JlCPF)
                     .addComponent(JtCpfAtleta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(JtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addComponent(Jtategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JbLoginAtleta)
-                    .addComponent(JbCadastroAtleta))
-                .addContainerGap(67, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(114, 114, 114)
-                    .addComponent(JlPeso)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(JtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(JlAltura))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(JlCategoria)
-                    .addContainerGap(120, Short.MAX_VALUE)))
+                    .addComponent(jLabel2)
+                    .addComponent(JtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jlSenha)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(JbCadastroAtleta)
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         pack();
@@ -175,10 +152,6 @@ public class LoginAtleta extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JtNomeAtletaActionPerformed
 
-    private void JtIdadeAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JtIdadeAtletaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JtIdadeAtletaActionPerformed
-
     private void JtCpfAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JtCpfAtletaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JtCpfAtletaActionPerformed
@@ -187,9 +160,25 @@ public class LoginAtleta extends javax.swing.JFrame {
         new Cadastroatleta().setVisible(true);
     }//GEN-LAST:event_JbCadastroAtletaActionPerformed
 
-    private void JbLoginAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbLoginAtletaActionPerformed
-        new Principal().setVisible(true);
-    }//GEN-LAST:event_JbLoginAtletaActionPerformed
+    private void jlSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlSenhaActionPerformed
+        Atleta a1 = new Atleta();
+        Atleta a_bd = new Atleta();
+        Atleta_ctr actr = new Atleta_ctr();
+        
+        a_bd = actr.info_atleta_login(a1);
+        if(a_bd != null){
+            new Principal().setVisible(true);
+        }
+        else{
+            JOptionPane.showMessageDialog(
+                    null,
+                    "usuario invalido!",
+                    "login Atleta",
+                    1
+                );
+        }
+        
+    }//GEN-LAST:event_jlSenhaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -229,18 +218,14 @@ public class LoginAtleta extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JbCadastroAtleta;
-    private javax.swing.JButton JbLoginAtleta;
-    private javax.swing.JLabel JlAltura;
     private javax.swing.JLabel JlCPF;
-    private javax.swing.JLabel JlCategoria;
-    private javax.swing.JLabel JlIdade;
     private javax.swing.JLabel JlNome;
-    private javax.swing.JLabel JlPeso;
-    private javax.swing.JTextField JtAltura;
     private javax.swing.JTextField JtCpfAtleta;
-    private javax.swing.JTextField JtIdadeAtleta;
     private javax.swing.JTextField JtNomeAtleta;
-    private javax.swing.JTextField JtPeso;
-    private javax.swing.JTextField Jtategoria;
+    private javax.swing.JTextField JtSenha;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton jlSenha;
     // End of variables declaration//GEN-END:variables
 }
