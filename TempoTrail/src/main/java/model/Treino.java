@@ -9,25 +9,42 @@ package model;
  * @author gabri
  */
 public class Treino {
-    public String intencidade;
-    public String modalidade;
-    //falta array
+    public String Exercicio;
+    public int Series;
+    public int Repeticoes;
+
+    public Treino(String Exercicio, int Series, int Repeticoes) {
+        this.Exercicio = Exercicio;
+        this.Series = Series;
+        this.Repeticoes = Repeticoes;
+    }
+
+    public String getExercicio() {
+        return Exercicio;
+    }
+
+    public void setExercicio(String Exercicio) {
+        this.Exercicio = Exercicio;
+    }
+
+    public int getSeries() {
+        return Series;
+    }
+
+    public void setSeries(int Series) {
+        this.Series = Series;
+    }
+
+    public int getRepeticoes() {
+        return Repeticoes;
+    }
+
+    public void setRepeticoes(int Repeticoes) {
+        this.Repeticoes = Repeticoes;
+    }
     
-    public String getIntencidade() {
-        return intencidade;
-    }
-
-    public void setIntencidade(String intencidade) {
-        this.intencidade = intencidade;
-    }
-
-    public String getModalidade() {
-        return modalidade;
-    }
-
-    public void setModalidade(String modalidade) {
-        this.modalidade = modalidade;
-    }
+    
+}
 
    
-}
+
