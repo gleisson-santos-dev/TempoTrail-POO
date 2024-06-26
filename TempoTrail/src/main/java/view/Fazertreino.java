@@ -148,4 +148,4 @@ public class Fazertreino extends javax.swing.JFrame {
     private javax.swing.JScrollPane jscrol;
     private javax.swing.JTable tbl;
     // End of variables declaration//GEN-END:variables
-}
+

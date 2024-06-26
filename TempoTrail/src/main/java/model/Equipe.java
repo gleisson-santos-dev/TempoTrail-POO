@@ -10,6 +10,6 @@ package model;
  */
 public class Equipe {
     //falta o array
-    public String nome;
+    private String nome;
     //falta outro array
 }

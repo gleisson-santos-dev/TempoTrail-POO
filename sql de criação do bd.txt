@@ -11,6 +11,7 @@ drop table Atleta;
 CREATE TABLE Treinador(
 	nome VARCHAR(45) NOT NULL,
 	idade INT NULL,
+	senha VARCHAR NOT NULL,
 	cpf VARCHAR(11) NOT NULL,
 	formacao VARCHAR(45) NULL,
 	PRIMARY KEY(cpf)
@@ -19,12 +20,14 @@ CREATE TABLE Treinador(
 CREATE TABLE Atleta(
 	nome VARCHAR(45) NOT NULL,
 	idade INT NULL,
+	senha VARCHAR NOT NULL,
 	cpf VARCHAR(11) NOT NULL,
 	peso FLOAT NOT NULL,
 	altura FLOAT NOT NULL,
 	categoria VARCHAR(45) NOT NULL,
 	PRIMARY KEY(cpf)
 );
+
 
 CREATE TABLE Treino(
 	id_treino_atleta VARCHAR NOT NULL,
@@ -34,7 +37,6 @@ CREATE TABLE Treino(
 	PRIMARY KEY(id_treino_atleta),
 	FOREIGN KEY(id_treino_atleta ) REFERENCES Atleta(cpf)
 );
-
 
 CREATE TABLE Desempenho(
 	id_atleta VARCHAR NOT NULL,

@@ -9,8 +9,8 @@ package model;
  * @author gabri
  */
 public class Treino {
-    public String intencidade;
-    public String modalidade;
+    private String intencidade;
+    private String modalidade;
     //falta array
     
     public String getIntencidade() {
