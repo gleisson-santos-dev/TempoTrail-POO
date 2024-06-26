@@ -39,7 +39,6 @@ public class Principal extends javax.swing.JFrame {
         JlTitulo = new javax.swing.JLabel();
         JbEquipe = new javax.swing.JButton();
         JbTreino = new javax.swing.JButton();
-        JbAtleta = new javax.swing.JButton();
         JbDesempenho = new javax.swing.JButton();
 
         JlTitulo.setText("TempoTrail");
@@ -58,13 +57,6 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        JbAtleta.setText("Atleta");
-        JbAtleta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JbAtletaActionPerformed(evt);
-            }
-        });
-
         JbDesempenho.setText("Desempenho");
         JbDesempenho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,13 +70,12 @@ public class Principal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(JbAtleta, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                    .addComponent(JbEquipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(JbTreino, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JbDesempenho, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(JbEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(JbTreino, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JbDesempenho, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(80, 80, 80)
@@ -101,9 +92,7 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(JbEquipe)
                     .addComponent(JbTreino))
                 .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JbAtleta)
-                    .addComponent(JbDesempenho))
+                .addComponent(JbDesempenho)
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
@@ -113,10 +102,6 @@ public class Principal extends javax.swing.JFrame {
     private void JbEquipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbEquipeActionPerformed
         new Equipe().setVisible(true);
     }//GEN-LAST:event_JbEquipeActionPerformed
-
-    private void JbAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbAtletaActionPerformed
-        Atleta.getInstance().setVisible(true);
-    }//GEN-LAST:event_JbAtletaActionPerformed
 
     private void JbTreinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbTreinoActionPerformed
         new Treino().setVisible(true);
@@ -165,7 +150,6 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton JbAtleta;
     private javax.swing.JButton JbDesempenho;
     private javax.swing.JButton JbEquipe;
     private javax.swing.JButton JbTreino;

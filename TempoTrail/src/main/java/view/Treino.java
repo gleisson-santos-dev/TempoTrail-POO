@@ -38,6 +38,16 @@ public class Treino extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         JlTitulo = new javax.swing.JLabel();
         JbVoltar = new javax.swing.JButton();
+        JlDistancia = new javax.swing.JLabel();
+        JlAlturacategoria = new javax.swing.JLabel();
+        JlVelocidade = new javax.swing.JLabel();
+        JtTempo = new javax.swing.JTextField();
+        JtDistancia = new javax.swing.JTextField();
+        JtAlturacategoria = new javax.swing.JTextField();
+        JtVelocidade = new javax.swing.JTextField();
+        JbAdicionar = new javax.swing.JButton();
+        JbDesempenho = new javax.swing.JButton();
+        JlTempo = new javax.swing.JLabel();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -53,6 +63,23 @@ public class Treino extends javax.swing.JFrame {
             }
         });
 
+        JlDistancia.setText("Distancia:");
+
+        JlAlturacategoria.setText("Altura de salto:");
+
+        JlVelocidade.setText("Velocidade:");
+
+        JbAdicionar.setText("Adicionar Resultado");
+
+        JbDesempenho.setText("Desempenho");
+        JbDesempenho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JbDesempenhoActionPerformed(evt);
+            }
+        });
+
+        JlTempo.setText("Tempo:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -61,11 +88,34 @@ public class Treino extends javax.swing.JFrame {
                 .addGap(56, 56, 56)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(89, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(135, 135, 135)
-                .addComponent(JlTitulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(JbVoltar)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JlTempo)
+                            .addComponent(JlDistancia)
+                            .addComponent(JlVelocidade)
+                            .addComponent(JlAlturacategoria))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(JtVelocidade)
+                                .addGap(27, 27, 27))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(JtAlturacategoria, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)
+                                    .addComponent(JtDistancia, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(JtTempo, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(JbDesempenho, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JbAdicionar)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(135, 135, 135)
+                        .addComponent(JlTitulo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(JbVoltar)))
                 .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
@@ -80,7 +130,29 @@ public class Treino extends javax.swing.JFrame {
                         .addComponent(JbVoltar)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(JlTempo)
+                            .addComponent(JtTempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(15, 15, 15)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(JtDistancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JlDistancia))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(JtAlturacategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JlAlturacategoria))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JlVelocidade)
+                            .addComponent(JtVelocidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(JbAdicionar)
+                        .addGap(26, 26, 26)
+                        .addComponent(JbDesempenho)))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         pack();
@@ -89,6 +161,10 @@ public class Treino extends javax.swing.JFrame {
     private void JbVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbVoltarActionPerformed
           new Principal().setVisible(true);
     }//GEN-LAST:event_JbVoltarActionPerformed
+
+    private void JbDesempenhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbDesempenhoActionPerformed
+        new Desempenho().setVisible(true);
+    }//GEN-LAST:event_JbDesempenhoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,8 +202,18 @@ public class Treino extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JbAdicionar;
+    private javax.swing.JButton JbDesempenho;
     private javax.swing.JButton JbVoltar;
+    private javax.swing.JLabel JlAlturacategoria;
+    private javax.swing.JLabel JlDistancia;
+    private javax.swing.JLabel JlTempo;
     private javax.swing.JLabel JlTitulo;
+    private javax.swing.JLabel JlVelocidade;
+    private javax.swing.JTextField JtAlturacategoria;
+    private javax.swing.JTextField JtDistancia;
+    private javax.swing.JTextField JtTempo;
+    private javax.swing.JTextField JtVelocidade;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables

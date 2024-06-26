@@ -21,15 +21,14 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="JbAtleta" alignment="0" pref="100" max="32767" attributes="0"/>
-                  <Component id="JbEquipe" alignment="0" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="JbTreino" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="JbDesempenho" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="JbEquipe" min="-2" pref="100" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="JbTreino" min="-2" pref="100" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="JbDesempenho" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
@@ -51,10 +50,7 @@
                   <Component id="JbTreino" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="JbAtleta" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="JbDesempenho" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
+              <Component id="JbDesempenho" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="28" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -80,14 +76,6 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JbTreinoActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="JbAtleta">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Atleta"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JbAtletaActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="JbDesempenho">
