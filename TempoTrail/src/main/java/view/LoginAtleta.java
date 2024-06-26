@@ -165,7 +165,12 @@ public class LoginAtleta extends javax.swing.JFrame {
         Atleta a_bd = new Atleta();
         Atleta_ctr actr = new Atleta_ctr();
         
+        a1.setNome(JtNomeAtleta.getText());
+        a1.setCpf(JtCpfAtleta.getText());
+        a1.setSenha(JtSenha.getText());
+        
         a_bd = actr.info_atleta_login(a1);
+        
         if(a_bd != null){
             new Principal().setVisible(true);
         }
