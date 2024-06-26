@@ -9,9 +9,9 @@ package model;
  * @author gabri
  */
 public class Atleta extends Usuario{
-    public float peso;
-    public double altura;
-    public String categoria;
+    private float peso;
+    private float altura;
+    private String categoria;
     
     public float getPeso() {
         return peso;

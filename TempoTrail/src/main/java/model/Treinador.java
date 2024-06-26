@@ -9,7 +9,7 @@ package model;
  * @author gabri
  */
 public class Treinador extends Usuario{
-    public String formacao;
+    private String formacao;
     
     public String getFormacao() {
         return formacao;

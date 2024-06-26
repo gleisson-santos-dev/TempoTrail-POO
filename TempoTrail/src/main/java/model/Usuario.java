@@ -9,12 +9,21 @@ package model;
  * @author gabri
  */
 public abstract class Usuario {
-    public String nome;
-    public int idade;
-    public String cpf;
+    private String nome;
+    private int idade;
+    private String cpf;
+    private String senha;
 
     public String getNome() {
         return nome;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public String getSenha() {
+        return senha;
     }
 
     public void setNome(String nome) {

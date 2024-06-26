@@ -25,14 +25,15 @@ public class Atleta_ctr {
         }
         try{
             conn = DriverManager.getConnection(url,user,senha);
-            String sql = "INSERT INTO Atleta(nome, idade, cpf, peso, altura, categoria)VALUES(?,?,?,?,?,?);";
+            String sql = "INSERT INTO Atleta(nome, idade,senha, cpf, peso, altura, categoria)VALUES(?,?,?,?,?,?,?);";
             ps = conn.prepareStatement(sql);
             ps.setString(1,a1.getNome());
             ps.setInt(2,a1.getIdade());
-            ps.setString(3,a1.getCpf());
-            ps.setFloat(4,a1.getPeso());
-            ps.setDouble(5,a1.getAltura());
-            ps.setString(6,a1.getCategoria());
+            ps.setString(3,a1.getSenha());
+            ps.setString(4,a1.getCpf());
+            ps.setFloat(5,a1.getPeso());
+            ps.setDouble(6,a1.getAltura());
+            ps.setString(7,a1.getCategoria());
             ps.execute();
             ps.close();
             conn.close();
