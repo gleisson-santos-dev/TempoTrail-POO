@@ -9,9 +9,9 @@ package model;
  * @author gabri
  */
 public class Treino {
-    public String Exercicio;
-    public int Series;
-    public int Repeticoes;
+    private String Exercicio;
+    private int Series;
+    private int Repeticoes;
 
     public Treino(String Exercicio, int Series, int Repeticoes) {
         this.Exercicio = Exercicio;

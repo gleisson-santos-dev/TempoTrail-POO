@@ -27,12 +27,13 @@ public class Treinador_ctr {
         }
         try{
             conn = DriverManager.getConnection(url,user,senha);
-            String sql = "INSERT INTO Treinador(nome, idade, cpf,formacao)VALUES(?,?,?,?);";
+            String sql = "INSERT INTO Treinador(nome,idade,senha,cpf,formacao)VALUES(?,?,?,?,?);";
             ps = conn.prepareStatement(sql);
             ps.setString(1,t1.getNome());
             ps.setInt(2,t1.getIdade());
-            ps.setString(3,t1.getCpf());
-            ps.setString(4,t1.getFormacao());
+            ps.setString(3, t1.getSenha());
+            ps.setString(4,t1.getCpf());
+            ps.setString(5,t1.getFormacao());
             ps.execute();
             ps.close();
             conn.close();

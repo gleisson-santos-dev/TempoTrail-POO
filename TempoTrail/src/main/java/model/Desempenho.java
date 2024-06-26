@@ -9,7 +9,7 @@ package model;
  * @author gabri
  */
 public class Desempenho {
-    public String nivel;
+    private String nivel;
     
     public String getNivel() {
         return nivel;

@@ -44,9 +44,9 @@ public class LoginAtleta extends javax.swing.JFrame {
         JlPeso = new javax.swing.JLabel();
         JlAltura = new javax.swing.JLabel();
         JlCategoria = new javax.swing.JLabel();
-        JcbCategoria = new javax.swing.JComboBox<>();
         JtPeso = new javax.swing.JTextField();
         JtAltura = new javax.swing.JTextField();
+        Jtategoria = new javax.swing.JTextField();
 
         JlNome.setText("Nome:");
 
@@ -92,8 +92,6 @@ public class LoginAtleta extends javax.swing.JFrame {
 
         JlCategoria.setText("Categoria:");
 
-        JcbCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -104,7 +102,7 @@ public class LoginAtleta extends javax.swing.JFrame {
                 .addGap(71, 71, 71)
                 .addComponent(JbCadastroAtleta)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,12 +111,14 @@ public class LoginAtleta extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(JlIdade)
                         .addGap(1, 1, 1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(JtNomeAtleta)
-                    .addComponent(JtIdadeAtleta)
-                    .addComponent(JtCpfAtleta)
-                    .addComponent(JtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Jtategoria, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(JtNomeAtleta)
+                        .addComponent(JtIdadeAtleta)
+                        .addComponent(JtCpfAtleta)
+                        .addComponent(JtPeso, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)))
                 .addGap(30, 30, 30))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -128,9 +128,7 @@ public class LoginAtleta extends javax.swing.JFrame {
                         .addComponent(JlAltura)
                         .addComponent(JlCategoria))
                     .addGap(18, 18, 18)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(JtAltura)
-                        .addComponent(JcbCategoria, 0, 243, Short.MAX_VALUE))
+                    .addComponent(JtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(31, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
@@ -150,7 +148,9 @@ public class LoginAtleta extends javax.swing.JFrame {
                     .addComponent(JtCpfAtleta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(JtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77)
+                .addGap(37, 37, 37)
+                .addComponent(Jtategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JbLoginAtleta)
                     .addComponent(JbCadastroAtleta))
@@ -164,10 +164,8 @@ public class LoginAtleta extends javax.swing.JFrame {
                         .addComponent(JtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(JlAltura))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(JcbCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(JlCategoria))
-                    .addContainerGap(114, Short.MAX_VALUE)))
+                    .addComponent(JlCategoria)
+                    .addContainerGap(120, Short.MAX_VALUE)))
         );
 
         pack();
@@ -232,7 +230,6 @@ public class LoginAtleta extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JbCadastroAtleta;
     private javax.swing.JButton JbLoginAtleta;
-    private javax.swing.JComboBox<String> JcbCategoria;
     private javax.swing.JLabel JlAltura;
     private javax.swing.JLabel JlCPF;
     private javax.swing.JLabel JlCategoria;
@@ -244,5 +241,6 @@ public class LoginAtleta extends javax.swing.JFrame {
     private javax.swing.JTextField JtIdadeAtleta;
     private javax.swing.JTextField JtNomeAtleta;
     private javax.swing.JTextField JtPeso;
+    private javax.swing.JTextField Jtategoria;
     // End of variables declaration//GEN-END:variables
 }
