@@ -13,7 +13,7 @@ public class Atleta_ctr {
     static String user = "postgres";
     static String senha = "0123456";
     
-    public static void cadastrarAtleta(Atleta a1){
+    public void cadastrarAtleta(Atleta a1){
         Connection conn = null;
         PreparedStatement ps = null;
         
@@ -42,16 +42,5 @@ public class Atleta_ctr {
         }
     }
     
-    public static void main(String args []){
-        Atleta a1 = new Atleta();
-        a1.setNome("pluto");
-        a1.setIdade(18);
-        a1.setAltura(160);
-        a1.setCpf("12345678912");
-        a1.setPeso(70);
-        a1.setCategoria("corrida");
-        
-        cadastrarAtleta(a1);
-    }
 
 }

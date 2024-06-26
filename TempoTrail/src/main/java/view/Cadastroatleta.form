@@ -23,79 +23,110 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="JlPeso" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="JlAltura" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="JlCategoria" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="JtAltura" max="32767" attributes="0"/>
-                          <Component id="JcbCategoria" pref="235" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Component id="JbCadastrar" alignment="0" min="-2" pref="339" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="JlIdade" min="-2" max="-2" attributes="0"/>
-                          <Component id="JlCpf" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="JlNome" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="JtPeso" alignment="0" min="-2" pref="260" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="JtCpfAtleta" alignment="0" pref="260" max="32767" attributes="0"/>
-                              <Component id="JtIdadeAtleta" alignment="0" max="32767" attributes="0"/>
-                              <Component id="JtNomeAtleta" alignment="0" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="JlPeso" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="JlNome" min="-2" max="-2" attributes="0"/>
+                                      <Component id="JlIdade" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="JtIdadeAtleta" alignment="1" min="-2" pref="260" max="-2" attributes="0"/>
+                                      <Component id="JtNomeAtleta" alignment="1" min="-2" pref="260" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="JlCpf" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="JtCpfAtleta" min="-2" pref="260" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
+                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
+                                  <Component id="JtAltura" min="-2" pref="235" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="JlCategoria" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="JbCadastrar" min="-2" pref="183" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="JtCategoria" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
+                              <Component id="JtPeso" min="-2" pref="260" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="JlAltura" min="-2" pref="66" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="306" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" pref="297" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="50" max="32767" attributes="0"/>
+              <EmptySpace pref="33" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="JlNome" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="JtNomeAtleta" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="40" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="JlNome" min="-2" max="-2" attributes="0"/>
+                  <Component id="JtNomeAtleta" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="JtIdadeAtleta" min="-2" max="-2" attributes="0"/>
-                  <Component id="JlIdade" min="-2" max="-2" attributes="0"/>
+                  <Component id="JlIdade" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="JlCpf" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JtCpfAtleta" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="JtCpfAtleta" min="-2" max="-2" attributes="0"/>
-                  <Component id="JlCpf" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="JlPeso" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="JtPeso" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JlPeso" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="JtAltura" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="JlAltura" alignment="0" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="JcbCategoria" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="JlCategoria" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JlAltura" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JtAltura" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="JlCategoria" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JtCategoria" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="JbCadastrar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -137,7 +168,7 @@
     <Component class="javax.swing.JButton" name="JbCadastrar">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="36" style="1"/>
+          <Font name="Segoe UI" size="24" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Cadastrar"/>
       </Properties>
@@ -147,37 +178,44 @@
     </Component>
     <Component class="javax.swing.JLabel" name="JlPeso">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Peso:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="JlAltura">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Altura Atleta:"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Altura"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="JlCategoria">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Categoria:"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="JcbCategoria">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="JtPeso">
     </Component>
     <Component class="javax.swing.JTextField" name="JtAltura">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Black" size="24" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="TempoTrail Cadastro"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="JtCategoria">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JtCategoriaActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

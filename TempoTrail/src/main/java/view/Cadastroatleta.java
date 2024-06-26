@@ -1,13 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package view;
 
-/**
- *
- * @author gabri
- */
+import model.Atleta;
+import control.Atleta_ctr;
+
 public class Cadastroatleta extends javax.swing.JFrame {
 
     /**
@@ -36,9 +32,10 @@ public class Cadastroatleta extends javax.swing.JFrame {
         JlPeso = new javax.swing.JLabel();
         JlAltura = new javax.swing.JLabel();
         JlCategoria = new javax.swing.JLabel();
-        JcbCategoria = new javax.swing.JComboBox<>();
         JtPeso = new javax.swing.JTextField();
         JtAltura = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        JtCategoria = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,7 +54,7 @@ public class Cadastroatleta extends javax.swing.JFrame {
             }
         });
 
-        JbCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        JbCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         JbCadastrar.setText("Cadastrar");
         JbCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,75 +62,106 @@ public class Cadastroatleta extends javax.swing.JFrame {
             }
         });
 
+        JlPeso.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         JlPeso.setText("Peso:");
 
-        JlAltura.setText("Altura Atleta:");
+        JlAltura.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        JlAltura.setText("Altura");
 
+        JlCategoria.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         JlCategoria.setText("Categoria:");
 
-        JcbCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        jLabel1.setText("TempoTrail Cadastro");
+
+        JtCategoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JtCategoriaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(49, 49, 49)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(JlPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(0, 0, Short.MAX_VALUE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(JlNome)
+                                        .addComponent(JlIdade))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(JtIdadeAtleta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(JtNomeAtleta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(JlCpf)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(JtCpfAtleta, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addGap(147, 147, 147)
+                                    .addComponent(JtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(JlCategoria)
+                                    .addGap(27, 27, 27)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(JbCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(52, 52, 52))
+                                        .addComponent(JtCategoria))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(147, 147, 147)
+                                .addComponent(JtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(JlAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(306, 306, 306)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(JlPeso)
-                            .addComponent(JlAltura)
-                            .addComponent(JlCategoria))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(JtAltura)
-                            .addComponent(JcbCategoria, 0, 235, Short.MAX_VALUE)))
-                    .addComponent(JbCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(JlIdade)
-                            .addComponent(JlCpf)
-                            .addComponent(JlNome))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(JtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(JtCpfAtleta, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
-                                .addComponent(JtIdadeAtleta)
-                                .addComponent(JtNomeAtleta)))))
-                .addContainerGap(50, Short.MAX_VALUE))
+                        .addGap(68, 68, 68)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(JlNome)
                     .addComponent(JtNomeAtleta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(JtIdadeAtleta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JlIdade))
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JlCpf)
+                    .addComponent(JtCpfAtleta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(JtCpfAtleta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JlCpf))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JlPeso)
-                    .addComponent(JtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(JtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JlAltura))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(JtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JlPeso))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JcbCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JlCategoria))
-                .addGap(22, 22, 22)
+                    .addComponent(JlAltura)
+                    .addComponent(JtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JlCategoria)
+                    .addComponent(JtCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(JbCadastrar)
-                .addGap(47, 47, 47))
+                .addGap(20, 20, 20))
         );
 
         pack();
@@ -144,8 +172,26 @@ public class Cadastroatleta extends javax.swing.JFrame {
     }//GEN-LAST:event_JtNomeAtletaActionPerformed
 
     private void JbCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbCadastrarActionPerformed
+        
+        Atleta a1 = new Atleta();
+        
+        a1.setNome(JtNomeAtleta.getText());
+        a1.setIdade(Integer.parseInt(JtIdadeAtleta.getText()));
+        a1.setCpf(JtCpfAtleta.getText());
+        a1.setPeso(Float.parseFloat(JtPeso.getText()));
+        a1.setAltura(Float.parseFloat(JtAltura.getText()));
+        a1.setCategoria(JtCategoria.getText());
+        
+        Atleta_ctr Actr = new Atleta_ctr();
+        
+        Actr.cadastrarAtleta(a1);
+        
         new LoginAtleta().setVisible(true);
     }//GEN-LAST:event_JbCadastrarActionPerformed
+
+    private void JtCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JtCategoriaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JtCategoriaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -185,7 +231,6 @@ public class Cadastroatleta extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JbCadastrar;
-    private javax.swing.JComboBox<String> JcbCategoria;
     private javax.swing.JLabel JlAltura;
     private javax.swing.JLabel JlCategoria;
     private javax.swing.JLabel JlCpf;
@@ -193,9 +238,11 @@ public class Cadastroatleta extends javax.swing.JFrame {
     private javax.swing.JLabel JlNome;
     private javax.swing.JLabel JlPeso;
     private javax.swing.JTextField JtAltura;
+    private javax.swing.JTextField JtCategoria;
     private javax.swing.JTextField JtCpfAtleta;
     private javax.swing.JTextField JtIdadeAtleta;
     private javax.swing.JTextField JtNomeAtleta;
     private javax.swing.JTextField JtPeso;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
