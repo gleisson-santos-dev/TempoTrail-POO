@@ -9,7 +9,8 @@ package model;
  * @author gabri
  */
 public class Equipe {
-    //falta o array
+    
     public String nome;
-    //falta outro array
+    public String categoria;
+    public int pontuacao;
 }

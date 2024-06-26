@@ -35,12 +35,22 @@ public class Fazertreino extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         JbAdicionar.setText("Adicionar");
+        JbAdicionar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JbAdicionarActionPerformed(evt);
+            }
+        });
 
         JtaFazertreino.setColumns(20);
         JtaFazertreino.setRows(5);
         jScrollPane1.setViewportView(JtaFazertreino);
 
         JbVoltar.setText("Voltar");
+        JbVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JbVoltarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -71,6 +81,14 @@ public class Fazertreino extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void JbVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbVoltarActionPerformed
+          new Treinador().setVisible(true);
+    }//GEN-LAST:event_JbVoltarActionPerformed
+
+    private void JbAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbAdicionarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JbAdicionarActionPerformed
 
     /**
      * @param args the command line arguments
