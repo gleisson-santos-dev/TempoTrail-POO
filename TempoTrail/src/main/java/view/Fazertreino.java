@@ -16,6 +16,21 @@ public class Fazertreino extends javax.swing.JFrame {
     public Fazertreino() {
         initComponents();
     }
+    public void teste(){
+
+        String selectedData = null;
+
+        int[] selectedRow = tbl.getSelectedRows();
+        int[] selectedColumns = tbl.getSelectedColumns();
+
+        for (int i = 0; i < selectedRow.length; i++) {
+            for (int j = 0; j < selectedColumns.length; j++) {
+            selectedData = (String) tbl.getValueAt(selectedRow[i], selectedColumns[j]);
+            }
+        }
+        System.out.println("Selected: " + selectedData);
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -26,21 +41,72 @@ public class Fazertreino extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jscrol = new javax.swing.JScrollPane();
+        tbl = new javax.swing.JTable();
+        JbAdicionar = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        tbl.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Exercicio", "Numero de series", "Numero de voltas"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jscrol.setViewportView(tbl);
+
+        JbAdicionar.setText("Adicionar");
+        JbAdicionar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JbAdicionarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 567, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jscrol, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(JbAdicionar)
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 351, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jscrol, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 25, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(JbAdicionar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void JbAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbAdicionarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JbAdicionarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +144,8 @@ public class Fazertreino extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JbAdicionar;
+    private javax.swing.JScrollPane jscrol;
+    private javax.swing.JTable tbl;
     // End of variables declaration//GEN-END:variables
 }
