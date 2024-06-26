@@ -9,12 +9,20 @@ package view;
  * @author gabri
  */
 public class LoginTreinador extends javax.swing.JFrame {
-
+    private static LoginTreinador instance;
     /**
      * Creates new form LoginTreinador
      */
     public LoginTreinador() {
         initComponents();
+        setLocationRelativeTo(null);
+    }
+    
+    public static LoginTreinador getInstance() {
+        if (instance == null){
+            instance = new LoginTreinador();
+        }
+        return instance;
     }
 
     /**
@@ -36,8 +44,6 @@ public class LoginTreinador extends javax.swing.JFrame {
         JbLoginTreinador = new javax.swing.JButton();
         JbCadastroTreinador = new javax.swing.JButton();
         JtFormacao = new javax.swing.JTextField();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         JlNome.setText("Nome:");
 

@@ -9,12 +9,20 @@ package view;
  * @author gabri
  */
 public class Treino extends javax.swing.JFrame {
-
+    private static Treino instance;
     /**
      * Creates new form Treino
      */
     public Treino() {
         initComponents();
+        setLocationRelativeTo(null);
+    }
+    
+    public static Treino getInstance(){
+        if (instance == null){
+            instance = new Treino();
+        }
+        return instance;
     }
 
     /**
@@ -30,8 +38,6 @@ public class Treino extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         JlTitulo = new javax.swing.JLabel();
         JbVoltar = new javax.swing.JButton();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);

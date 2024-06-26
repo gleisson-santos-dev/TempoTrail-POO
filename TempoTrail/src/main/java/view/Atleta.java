@@ -13,10 +13,18 @@ public class Atleta extends javax.swing.JFrame {
     /**
      * Creates new form Atleta
      */
-    public Atleta() {
+    private static Atleta instance;
+    
+    private Atleta() {
         initComponents();
+        setLocationRelativeTo(null);
     }
-
+    public static Atleta getInstance() {
+        if (instance == null){
+            instance = new Atleta();
+        }
+        return instance;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -37,8 +45,6 @@ public class Atleta extends javax.swing.JFrame {
         JbAdicionar = new javax.swing.JButton();
         JbDesempenho = new javax.swing.JButton();
         JbVoltar = new javax.swing.JButton();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         JlTempo.setText("Tempo:");
 

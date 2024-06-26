@@ -10,12 +10,20 @@ import model.Treinador;
  * @author gabri
  */
 public class Cadastrotreinador extends javax.swing.JFrame {
-
+    private static Cadastrotreinador instance;
     /**
      * Creates new form Cadastrotreinador
      */
     public Cadastrotreinador() {
         initComponents();
+        setLocationRelativeTo(null);
+    }
+    
+    public static Cadastrotreinador getInstance() {
+        if (instance == null) {
+            instance = new Cadastrotreinador();
+        }
+        return instance;
     }
 
     /**
@@ -37,8 +45,6 @@ public class Cadastrotreinador extends javax.swing.JFrame {
         JlFormacao = new javax.swing.JLabel();
         JtFormacao = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         JlNome.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         JlNome.setText("Nome:");

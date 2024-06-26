@@ -5,12 +5,20 @@ import model.Atleta;
 import control.Atleta_ctr;
 
 public class Cadastroatleta extends javax.swing.JFrame {
-
+    private static Cadastroatleta instance;
     /**
      * Creates new form Cadastro
      */
     public Cadastroatleta() {
         initComponents();
+        setLocationRelativeTo(null);
+    }
+    
+    public static Cadastroatleta getInstance(){
+        if(instance == null){
+            instance = new Cadastroatleta();
+        }
+        return instance;
     }
 
     /**
@@ -36,8 +44,6 @@ public class Cadastroatleta extends javax.swing.JFrame {
         JtAltura = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         JtCategoria = new javax.swing.JTextField();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         JlNome.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         JlNome.setText("Nome:");

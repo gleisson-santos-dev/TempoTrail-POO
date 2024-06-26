@@ -9,14 +9,21 @@ package view;
  * @author gabri
  */
 public class LoginAtleta extends javax.swing.JFrame {
-
+    private static LoginAtleta instance;
     /**
      * Creates new form Login
      */
     public LoginAtleta() {
         initComponents();
+        setLocationRelativeTo(null);
     }
-
+    
+    public static LoginAtleta getInstance() {
+        if (instance == null) {
+            instance = new LoginAtleta();
+        }
+        return instance;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -40,8 +47,6 @@ public class LoginAtleta extends javax.swing.JFrame {
         JcbCategoria = new javax.swing.JComboBox<>();
         JtPeso = new javax.swing.JTextField();
         JtAltura = new javax.swing.JTextField();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         JlNome.setText("Nome:");
 

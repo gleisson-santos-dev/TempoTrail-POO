@@ -13,8 +13,18 @@ public class Principal extends javax.swing.JFrame {
     /**
      * Creates new form Principal
      */
+    private static Principal instance;
+    
     public Principal() {
         initComponents();
+        setLocationRelativeTo(null);
+    }
+    
+    public static Principal getInstance() {
+        if(instance == null){
+            instance = new Principal();
+        }
+        return instance;
     }
 
     /**
@@ -31,8 +41,6 @@ public class Principal extends javax.swing.JFrame {
         JbTreino = new javax.swing.JButton();
         JbAtleta = new javax.swing.JButton();
         JbDesempenho = new javax.swing.JButton();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         JlTitulo.setText("TempoTrail");
 
@@ -107,7 +115,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_JbEquipeActionPerformed
 
     private void JbAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbAtletaActionPerformed
-        new Atleta().setVisible(true);
+        Atleta.getInstance().setVisible(true);
     }//GEN-LAST:event_JbAtletaActionPerformed
 
     private void JbTreinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbTreinoActionPerformed

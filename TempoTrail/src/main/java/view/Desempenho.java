@@ -9,12 +9,20 @@ package view;
  * @author gabri
  */
 public class Desempenho extends javax.swing.JFrame {
-
+    private static Desempenho instance;
     /**
      * Creates new form Desempenho
      */
     public Desempenho() {
         initComponents();
+        setLocationRelativeTo(null);
+    }
+    
+    public static Desempenho getInstance() {
+        if (instance == null){
+            instance = new Desempenho();
+        }
+        return instance;
     }
 
     /**
@@ -29,8 +37,6 @@ public class Desempenho extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         JbVoltar = new javax.swing.JButton();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
