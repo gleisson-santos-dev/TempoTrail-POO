@@ -26,21 +26,112 @@ public class Treinador extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        JlTitulo = new javax.swing.JLabel();
+        JbFazertreino = new javax.swing.JButton();
+        JbEquipe = new javax.swing.JButton();
+        JbAdicionar = new javax.swing.JButton();
+        JtCpf = new javax.swing.JTextField();
+        JlCpf = new javax.swing.JLabel();
+        JlCategoria = new javax.swing.JLabel();
+        JtCategoria = new javax.swing.JTextField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        JlTitulo.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        JlTitulo.setText("TempoTrail Treinador");
+
+        JbFazertreino.setText("Fazer Treino");
+        JbFazertreino.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JbFazertreinoActionPerformed(evt);
+            }
+        });
+
+        JbEquipe.setText("Equipe");
+        JbEquipe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JbEquipeActionPerformed(evt);
+            }
+        });
+
+        JbAdicionar.setText("Adicionar mebro a equipe");
+
+        JtCpf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JtCpfActionPerformed(evt);
+            }
+        });
+
+        JlCpf.setText("Cpf:");
+
+        JlCategoria.setText("Categoria:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(JbAdicionar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(JlCpf)
+                                    .addComponent(JlCategoria))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(JtCategoria)
+                                    .addComponent(JtCpf)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(0, 1, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(JlTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(JbFazertreino)
+                                        .addGap(115, 115, 115)
+                                        .addComponent(JbEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(21, 21, 21))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(JlTitulo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JbFazertreino)
+                    .addComponent(JbEquipe))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JlCpf))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JlCategoria)
+                    .addComponent(JtCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(JbAdicionar)
+                .addGap(28, 28, 28))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void JbEquipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbEquipeActionPerformed
+          new Equipe().setVisible(true);
+    }//GEN-LAST:event_JbEquipeActionPerformed
+
+    private void JbFazertreinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbFazertreinoActionPerformed
+          new Fazertreino().setVisible(true);
+    }//GEN-LAST:event_JbFazertreinoActionPerformed
+
+    private void JtCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JtCpfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JtCpfActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +169,13 @@ public class Treinador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JbAdicionar;
+    private javax.swing.JButton JbEquipe;
+    private javax.swing.JButton JbFazertreino;
+    private javax.swing.JLabel JlCategoria;
+    private javax.swing.JLabel JlCpf;
+    private javax.swing.JLabel JlTitulo;
+    private javax.swing.JTextField JtCategoria;
+    private javax.swing.JTextField JtCpf;
     // End of variables declaration//GEN-END:variables
 }

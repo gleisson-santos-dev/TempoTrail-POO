@@ -31,17 +31,17 @@ CREATE TABLE Atleta(
 
 CREATE TABLE Treino(
 	id_treino_atleta VARCHAR NOT NULL,
-	intencidade VARCHAR(20) NULL,
-	modalidade VARCHAR(30) NULL,
-	exercicios VARCHAR(250) NOT NULL,
+	exercicios VARCHAR(500) NOT NULL,
 	PRIMARY KEY(id_treino_atleta),
 	FOREIGN KEY(id_treino_atleta ) REFERENCES Atleta(cpf)
 );
 
 CREATE TABLE Desempenho(
 	id_atleta VARCHAR NOT NULL,
-	nivel VARCHAR(30) NULL,
-	relatorio VARCHAR(300) NOT NULL,
+	tempo int NULL,
+	distancia int NULL,
+	altura_salto int null,
+	velocidade int null,
 	primary key(id_atleta),
 	FOREIGN KEY (id_atleta) REFERENCES Atleta(cpf)
 );
