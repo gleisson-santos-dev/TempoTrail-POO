@@ -10,12 +10,20 @@ import model.Treinador;
  * @author gabri
  */
 public class Cadastrotreinador extends javax.swing.JFrame {
-
+    private static Cadastrotreinador instance;
     /**
      * Creates new form Cadastrotreinador
      */
     public Cadastrotreinador() {
         initComponents();
+        setLocationRelativeTo(null);
+    }
+    
+    public static Cadastrotreinador getInstance() {
+        if (instance == null) {
+            instance = new Cadastrotreinador();
+        }
+        return instance;
     }
 
     /**
@@ -36,9 +44,9 @@ public class Cadastrotreinador extends javax.swing.JFrame {
         JbCadastrar = new javax.swing.JButton();
         JlFormacao = new javax.swing.JLabel();
         JtFormacao = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        JlTitulo = new javax.swing.JLabel();
+        JlSenha = new javax.swing.JLabel();
+        JtSenha = new javax.swing.JTextField();
 
         JlNome.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         JlNome.setText("Nome:");
@@ -66,39 +74,44 @@ public class Cadastrotreinador extends javax.swing.JFrame {
         JlFormacao.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         JlFormacao.setText("Formação:");
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel1.setText("TempoTrail Cadastro");
+        JlTitulo.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        JlTitulo.setText("TempoTrail Cadastro");
+
+        JlSenha.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        JlSenha.setText("Senha");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(96, Short.MAX_VALUE)
+                .addComponent(JlTitulo)
+                .addGap(81, 81, 81))
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(JlIdade)
                     .addComponent(JlCpf)
                     .addComponent(JlNome)
-                    .addComponent(JlFormacao))
+                    .addComponent(JlFormacao)
+                    .addComponent(JlSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(JbCadastrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(JtCpf, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
                     .addComponent(JtIdade)
                     .addComponent(JtNome)
-                    .addComponent(JtFormacao))
+                    .addComponent(JtFormacao)
+                    .addComponent(JtSenha))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(96, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(81, 81, 81))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addComponent(JlTitulo)
+                .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JlNome)
                     .addComponent(JtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -114,7 +127,11 @@ public class Cadastrotreinador extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JlFormacao)
                     .addComponent(JtFormacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JlSenha)
+                    .addComponent(JtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addComponent(JbCadastrar)
                 .addGap(29, 29, 29))
         );
@@ -132,6 +149,7 @@ public class Cadastrotreinador extends javax.swing.JFrame {
         
         t1.setNome(JtNome.getText());
         t1.setIdade(Integer.parseInt(JtIdade.getText()));
+        t1.setSenha(JtSenha.getText());
         t1.setCpf(JtCpf.getText());
         t1.setFormacao(JtFormacao.getText());
         
@@ -181,10 +199,12 @@ public class Cadastrotreinador extends javax.swing.JFrame {
     private javax.swing.JLabel JlFormacao;
     private javax.swing.JLabel JlIdade;
     private javax.swing.JLabel JlNome;
+    private javax.swing.JLabel JlSenha;
+    private javax.swing.JLabel JlTitulo;
     private javax.swing.JTextField JtCpf;
     private javax.swing.JTextField JtFormacao;
     private javax.swing.JTextField JtIdade;
     private javax.swing.JTextField JtNome;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField JtSenha;
     // End of variables declaration//GEN-END:variables
 }

@@ -9,12 +9,20 @@ package view;
  * @author gabri
  */
 public class Fazertreino extends javax.swing.JFrame {
-
+    private static Fazertreino instance;
     /**
      * Creates new form Fazertreino
      */
     public Fazertreino() {
         initComponents();
+        setLocationRelativeTo(null);
+    }
+    
+    public static Fazertreino getInstance(){
+        if (instance == null) {
+            instance = new Fazertreino();
+        }
+        return instance;
     }
   
 
@@ -31,8 +39,6 @@ public class Fazertreino extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         JtaFazertreino = new javax.swing.JTextArea();
         JbVoltar = new javax.swing.JButton();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         JbAdicionar.setText("Adicionar");
         JbAdicionar.addActionListener(new java.awt.event.ActionListener() {

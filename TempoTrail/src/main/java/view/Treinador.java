@@ -9,12 +9,20 @@ package view;
  * @author gabri
  */
 public class Treinador extends javax.swing.JFrame {
-
+    private static Treinador instance;
     /**
      * Creates new form Treinador
      */
     public Treinador() {
         initComponents();
+        setLocationRelativeTo(null);
+    }
+    
+    public static Treinador getInstance() {
+        if (instance == null) {
+            instance = new Treinador();
+        }
+        return instance;
     }
 
     /**
@@ -34,8 +42,6 @@ public class Treinador extends javax.swing.JFrame {
         JlCpf = new javax.swing.JLabel();
         JlCategoria = new javax.swing.JLabel();
         JtCategoria = new javax.swing.JTextField();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         JlTitulo.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
         JlTitulo.setText("TempoTrail Treinador");

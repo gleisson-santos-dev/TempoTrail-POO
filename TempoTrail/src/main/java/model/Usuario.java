@@ -13,6 +13,7 @@ public abstract class Usuario {
     private int idade;
     private String cpf;
     private String senha;
+<<<<<<< HEAD
     
     public String getSenha() {
         return senha;
@@ -21,8 +22,19 @@ public abstract class Usuario {
         this.senha = senha;
     }
     
+=======
+
+>>>>>>> 94accbb71b2ccbee7049a3147d1626735af3479c
     public String getNome() {
         return nome;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public String getSenha() {
+        return senha;
     }
 
     public void setNome(String nome) {

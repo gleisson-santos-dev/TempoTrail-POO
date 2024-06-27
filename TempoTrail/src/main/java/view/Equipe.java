@@ -9,14 +9,21 @@ package view;
  * @author gabri
  */
 public class Equipe extends javax.swing.JFrame {
-
+    private static Equipe instance;
     /**
      * Creates new form equipe
      */
     public Equipe() {
         initComponents();
+        setLocationRelativeTo(null);
     }
-
+    
+    public static Equipe getInstance() {
+        if (instance == null){
+            instance = new Equipe();
+        }
+        return instance;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,8 +36,6 @@ public class Equipe extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         JbPrincipal = new javax.swing.JButton();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

@@ -13,8 +13,18 @@ public class Principal extends javax.swing.JFrame {
     /**
      * Creates new form Principal
      */
+    private static Principal instance;
+    
     public Principal() {
         initComponents();
+        setLocationRelativeTo(null);
+    }
+    
+    public static Principal getInstance() {
+        if(instance == null){
+            instance = new Principal();
+        }
+        return instance;
     }
 
     /**
@@ -29,10 +39,7 @@ public class Principal extends javax.swing.JFrame {
         JlTitulo = new javax.swing.JLabel();
         JbEquipe = new javax.swing.JButton();
         JbTreino = new javax.swing.JButton();
-        JbAtleta = new javax.swing.JButton();
         JbDesempenho = new javax.swing.JButton();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         JlTitulo.setText("TempoTrail");
 
@@ -50,13 +57,6 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        JbAtleta.setText("Atleta");
-        JbAtleta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JbAtletaActionPerformed(evt);
-            }
-        });
-
         JbDesempenho.setText("Desempenho");
         JbDesempenho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,34 +69,31 @@ public class Principal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(200, 200, 200)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(JbEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(JbTreino, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JbDesempenho, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(80, 80, 80)
                 .addComponent(JlTitulo)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(JbAtleta, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                    .addComponent(JbEquipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(JbTreino, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JbDesempenho, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(102, 102, 102))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(18, 18, 18)
                 .addComponent(JlTitulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JbEquipe)
                     .addComponent(JbTreino))
                 .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JbAtleta)
-                    .addComponent(JbDesempenho))
-                .addContainerGap(179, Short.MAX_VALUE))
+                .addComponent(JbDesempenho)
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         pack();
@@ -105,10 +102,6 @@ public class Principal extends javax.swing.JFrame {
     private void JbEquipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbEquipeActionPerformed
         new Equipe().setVisible(true);
     }//GEN-LAST:event_JbEquipeActionPerformed
-
-    private void JbAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbAtletaActionPerformed
-        new Atleta().setVisible(true);
-    }//GEN-LAST:event_JbAtletaActionPerformed
 
     private void JbTreinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbTreinoActionPerformed
         new Treino().setVisible(true);
@@ -157,7 +150,6 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton JbAtleta;
     private javax.swing.JButton JbDesempenho;
     private javax.swing.JButton JbEquipe;
     private javax.swing.JButton JbTreino;

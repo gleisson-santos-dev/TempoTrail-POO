@@ -3,18 +3,28 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package view;
-
+import control.Treinador_ctr;
+import model.Treinador;
+import javax.swing.JOptionPane;
 /**
  *
  * @author gabri
  */
 public class LoginTreinador extends javax.swing.JFrame {
-
+    private static LoginTreinador instance;
     /**
      * Creates new form LoginTreinador
      */
     public LoginTreinador() {
         initComponents();
+        setLocationRelativeTo(null);
+    }
+    
+    public static LoginTreinador getInstance() {
+        if (instance == null){
+            instance = new LoginTreinador();
+        }
+        return instance;
     }
 
     /**
@@ -27,35 +37,23 @@ public class LoginTreinador extends javax.swing.JFrame {
     private void initComponents() {
 
         JlNome = new javax.swing.JLabel();
-        JlIdade = new javax.swing.JLabel();
         JlCPF = new javax.swing.JLabel();
-        JlFormacao = new javax.swing.JLabel();
         JtNomeTreinador = new javax.swing.JTextField();
-        JtIdadeTreinador = new javax.swing.JTextField();
         JtCpfTreinador = new javax.swing.JTextField();
         JbLoginTreinador = new javax.swing.JButton();
         JbCadastroTreinador = new javax.swing.JButton();
-        JtFormacao = new javax.swing.JTextField();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        JtSenha = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
 
         JlNome.setText("Nome:");
 
-        JlIdade.setText("Idade:");
-
         JlCPF.setText("CPF:");
-
-        JlFormacao.setText("Formação:");
 
         JtNomeTreinador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JtNomeTreinadorActionPerformed(evt);
-            }
-        });
-
-        JtIdadeTreinador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JtIdadeTreinadorActionPerformed(evt);
             }
         });
 
@@ -65,71 +63,90 @@ public class LoginTreinador extends javax.swing.JFrame {
             }
         });
 
-        JbLoginTreinador.setText(" Login Treinador");
+        JbLoginTreinador.setText("Login");
         JbLoginTreinador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JbLoginTreinadorActionPerformed(evt);
             }
         });
 
-        JbCadastroTreinador.setText("Cadastro");
+        JbCadastroTreinador.setText("Cadastre-se");
         JbCadastroTreinador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JbCadastroTreinadorActionPerformed(evt);
             }
         });
 
+        jLabel1.setText("Senha");
+
+        jLabel2.setText("Não tem conta?");
+
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel3.setText("Login Treinador");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(JlCPF)
-                            .addComponent(JlNome))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(JlIdade)
-                            .addGap(1, 1, 1)))
-                    .addComponent(JlFormacao))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2)
+                            .addComponent(JbCadastroTreinador)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(34, 34, 34)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(JlNome)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(JlCPF))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(40, 40, 40)
+                                .addComponent(jLabel1)))
+                        .addGap(23, 23, 23)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(JtNomeTreinador, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                            .addComponent(JtCpfTreinador, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                            .addComponent(JtSenha))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 136, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(JbLoginTreinador)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(JbCadastroTreinador))
-                    .addComponent(JtNomeTreinador, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
-                    .addComponent(JtIdadeTreinador, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
-                    .addComponent(JtCpfTreinador, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
-                    .addComponent(JtFormacao))
-                .addContainerGap(59, Short.MAX_VALUE))
+                        .addGap(167, 167, 167))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(120, 120, 120))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(51, 51, 51)
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JlNome)
                     .addComponent(JtNomeTreinador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JlIdade)
-                    .addComponent(JtIdadeTreinador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JlCPF)
                     .addComponent(JtCpfTreinador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(JtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addComponent(JbLoginTreinador)
+                .addGap(12, 12, 12)
+                .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JtFormacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JlFormacao))
-                .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JbLoginTreinador)
-                    .addComponent(JbCadastroTreinador))
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addComponent(JbCadastroTreinador)
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         pack();
@@ -139,15 +156,34 @@ public class LoginTreinador extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JtNomeTreinadorActionPerformed
 
-    private void JtIdadeTreinadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JtIdadeTreinadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JtIdadeTreinadorActionPerformed
-
     private void JtCpfTreinadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JtCpfTreinadorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JtCpfTreinadorActionPerformed
 
     private void JbLoginTreinadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbLoginTreinadorActionPerformed
+        Treinador t1 = new Treinador();
+        Treinador t_bd = new Treinador();
+        Treinador_ctr tctr = new Treinador_ctr();
+        
+        t1.setNome(JtNomeTreinador.getText());
+        t1.setCpf(JtCpfTreinador.getText());
+        t1.setSenha(JtSenha.getText());
+        
+        t_bd = tctr.info_Treinador_login(t1);
+        
+        if(t_bd != null){
+            new Principal().setVisible(true);
+        }
+        else{
+            JOptionPane.showMessageDialog(
+                    null,
+                    "usuario invalido!",
+                    "login Atleta",
+                    1
+                );
+        }
+        
+        
         new Principal().setVisible(true);
     }//GEN-LAST:event_JbLoginTreinadorActionPerformed
 
@@ -194,12 +230,12 @@ public class LoginTreinador extends javax.swing.JFrame {
     private javax.swing.JButton JbCadastroTreinador;
     private javax.swing.JButton JbLoginTreinador;
     private javax.swing.JLabel JlCPF;
-    private javax.swing.JLabel JlFormacao;
-    private javax.swing.JLabel JlIdade;
     private javax.swing.JLabel JlNome;
     private javax.swing.JTextField JtCpfTreinador;
-    private javax.swing.JTextField JtFormacao;
-    private javax.swing.JTextField JtIdadeTreinador;
     private javax.swing.JTextField JtNomeTreinador;
+    private javax.swing.JTextField JtSenha;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }
