@@ -52,7 +52,6 @@ public class Atleta_ctr {
         ResultSet rs = null;
         Statement st =null;
         
-        
         String sql = "SELECT nome, cpf, senha FROM Atleta";
          try{
             Class.forName(driver);
@@ -84,5 +83,27 @@ public class Atleta_ctr {
         return a2;
     }
     
+    public void salvarDesempenho(String cpf, String nivel, String relatorio) {
+        Connection conn = null;
+        PreparedStatement ps = null;
 
+        try {
+            Class.forName(driver);
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+        try {
+            conn = DriverManager.getConnection(url, user, senha);
+            String sql = "INSERT INTO Desempenho(id_atleta, nivel, relatorio) VALUES (?, ?, ?);";
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, cpf);
+            ps.setString(2, nivel);
+            ps.setString(3, relatorio);
+            ps.execute();
+            ps.close();
+            conn.close();
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+    }
 }
