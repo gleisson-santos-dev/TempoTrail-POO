@@ -3,6 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package view;
+import model.Atleta;
+import model.Desempenho;
+import control.Desempenho_ctr;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -35,14 +39,14 @@ public class Desempenho_Tela extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        TbDesempenho = new javax.swing.JTable();
         JbVoltar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         JtCpf = new javax.swing.JTextField();
         JbConsultar = new javax.swing.JButton();
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        TbDesempenho.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -53,7 +57,7 @@ public class Desempenho_Tela extends javax.swing.JFrame {
                 "Tempo", "Distancia", "Altura de Salto", "Velicidade"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(TbDesempenho);
 
         JbVoltar.setText("Voltar");
         JbVoltar.addActionListener(new java.awt.event.ActionListener() {
@@ -123,7 +127,17 @@ public class Desempenho_Tela extends javax.swing.JFrame {
     }//GEN-LAST:event_JbVoltarActionPerformed
 
     private void JbConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbConsultarActionPerformed
-        // TODO add your handling code here:
+       Atleta a1 = new Atleta();
+       Desempenho d1 = new Desempenho();
+       Desempenho_ctr dctr = new Desempenho_ctr();
+       
+       a1.setCpf(JtCpf.getText());
+       d1 = dctr.mostra_desempenho(a1);
+       
+       DefaultTableModel modelo = (DefaultTableModel)TbDesempenho.getModel();
+        modelo.setRowCount(0);
+        modelo.insertRow(0, new Object[]{d1.getTempo(),d1.getDistacia(),d1.getAltuta_salto(),d1.getVelocidade()}); 
+       
     }//GEN-LAST:event_JbConsultarActionPerformed
 
     /**
@@ -166,9 +180,9 @@ public class Desempenho_Tela extends javax.swing.JFrame {
     private javax.swing.JButton JbConsultar;
     private javax.swing.JButton JbVoltar;
     private javax.swing.JTextField JtCpf;
+    private javax.swing.JTable TbDesempenho;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

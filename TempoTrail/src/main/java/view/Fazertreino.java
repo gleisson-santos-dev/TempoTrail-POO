@@ -104,7 +104,7 @@ public class Fazertreino extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void JbVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbVoltarActionPerformed
-          new Treinador().setVisible(true);
+          new Treinador_tela().setVisible(true);
     }//GEN-LAST:event_JbVoltarActionPerformed
 
     private void JbAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbAdicionarActionPerformed

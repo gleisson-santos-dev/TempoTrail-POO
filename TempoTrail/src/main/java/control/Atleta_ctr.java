@@ -46,7 +46,7 @@ public class Atleta_ctr {
     }
     
     public Atleta info_atleta_login(Atleta a1){
-        Atleta a2 = new Atleta();
+        Atleta a2 = null;
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -71,6 +71,7 @@ public class Atleta_ctr {
             senha = a1.getSenha();
             while(rs.next()){
                 if(cpf.equals(rs.getString(2)) && nome.equals(rs.getString(1)) && senha.equals(rs.getString(3))){
+                    a2 = new Atleta();
                     a2.setNome(rs.getString(1));
                     a2.setSenha(rs.getString(3));
                     a2.setCpf(rs.getString(2));

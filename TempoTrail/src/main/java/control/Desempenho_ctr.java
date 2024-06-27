@@ -6,6 +6,8 @@ package control;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import model.Desempenho;
 import model.Atleta;
 
@@ -46,5 +48,38 @@ public class Desempenho_ctr {
         catch(Exception ex){
             System.out.println(ex);
         }
+    }
+    
+    public Desempenho mostra_desempenho(Atleta a1){
+        Desempenho d1 = new Desempenho();
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        Statement st =null;
+        
+        String sql = "select tempo, distancia, altura_salto, velocidade from desempenho where desempenho.id_atleta = '"+ a1.getCpf() + "'";
+        
+         try{
+            Class.forName(driver);
+        }
+        catch(Exception ex){
+            System.out.println(ex);
+        }
+        try{
+            conn = DriverManager.getConnection(url,user,senha);
+            st = conn.createStatement();
+            rs = st.executeQuery(sql);
+             while(rs.next()){
+                 d1.setTempo(rs.getFloat(1));
+                 d1.setDistacia(rs.getFloat(2));
+                 d1.setAltuta_salto(rs.getFloat(3));
+                 d1.setVelocidade(rs.getFloat(4));
+             }
+        }
+        catch(Exception ex){
+             System.out.println(ex);
+        }
+        
+        return d1;
     }
 }

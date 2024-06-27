@@ -37,7 +37,6 @@ public class Treino_Tela extends javax.swing.JFrame {
     private void initComponents() {
 
         JlTitulo = new javax.swing.JLabel();
-        JbVoltar = new javax.swing.JButton();
         JlDistancia = new javax.swing.JLabel();
         JlAlturacategoria = new javax.swing.JLabel();
         JlVelocidade = new javax.swing.JLabel();
@@ -48,7 +47,6 @@ public class Treino_Tela extends javax.swing.JFrame {
         JbAdicionar = new javax.swing.JButton();
         JbDesempenho = new javax.swing.JButton();
         JlTempo = new javax.swing.JLabel();
-        JbFazerTreino = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         JtCpf = new javax.swing.JTextField();
         JbVerTreino = new javax.swing.JButton();
@@ -58,13 +56,6 @@ public class Treino_Tela extends javax.swing.JFrame {
 
         JlTitulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         JlTitulo.setText("Treino");
-
-        JbVoltar.setText("Voltar");
-        JbVoltar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JbVoltarActionPerformed(evt);
-            }
-        });
 
         JlDistancia.setText("Distancia:");
 
@@ -87,13 +78,6 @@ public class Treino_Tela extends javax.swing.JFrame {
         });
 
         JlTempo.setText("Tempo:");
-
-        JbFazerTreino.setText("Fazer Treino");
-        JbFazerTreino.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JbFazerTreinoActionPerformed(evt);
-            }
-        });
 
         jLabel1.setText("cpf");
 
@@ -142,10 +126,7 @@ public class Treino_Tela extends javax.swing.JFrame {
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(JbFazerTreino, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(JbDesempenho, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
-                                .addComponent(JbVoltar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(JbDesempenho, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(JbVerTreino, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(95, 95, 95))
                     .addGroup(layout.createSequentialGroup()
@@ -171,11 +152,7 @@ public class Treino_Tela extends javax.swing.JFrame {
                         .addGap(78, 78, 78)
                         .addComponent(JbVerTreino)
                         .addGap(26, 26, 26)
-                        .addComponent(JbDesempenho)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(JbFazerTreino)
-                        .addGap(9, 9, 9)
-                        .addComponent(JbVoltar))
+                        .addComponent(JbDesempenho))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -203,17 +180,9 @@ public class Treino_Tela extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JbVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbVoltarActionPerformed
-          new Principal().setVisible(true);
-    }//GEN-LAST:event_JbVoltarActionPerformed
-
     private void JbDesempenhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbDesempenhoActionPerformed
         new Desempenho_Tela().setVisible(true);
     }//GEN-LAST:event_JbDesempenhoActionPerformed
-
-    private void JbFazerTreinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbFazerTreinoActionPerformed
-       new Fazertreino().setVisible(true);
-    }//GEN-LAST:event_JbFazerTreinoActionPerformed
 
     private void JtCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JtCpfActionPerformed
         // TODO add your handling code here:
@@ -282,9 +251,7 @@ public class Treino_Tela extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JbAdicionar;
     private javax.swing.JButton JbDesempenho;
-    private javax.swing.JButton JbFazerTreino;
     private javax.swing.JButton JbVerTreino;
-    private javax.swing.JButton JbVoltar;
     private javax.swing.JLabel JlAlturacategoria;
     private javax.swing.JLabel JlDistancia;
     private javax.swing.JLabel JlTempo;

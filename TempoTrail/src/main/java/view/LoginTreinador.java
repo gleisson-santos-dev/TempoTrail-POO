@@ -172,7 +172,7 @@ public class LoginTreinador extends javax.swing.JFrame {
         t_bd = tctr.info_Treinador_login(t1);
         
         if(t_bd != null){
-            new Principal().setVisible(true);
+            new Treinador_tela().setVisible(true);
         }
         else{
             JOptionPane.showMessageDialog(
@@ -183,8 +183,6 @@ public class LoginTreinador extends javax.swing.JFrame {
                 );
         }
         
-        
-        new Principal().setVisible(true);
     }//GEN-LAST:event_JbLoginTreinadorActionPerformed
 
     private void JbCadastroTreinadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbCadastroTreinadorActionPerformed

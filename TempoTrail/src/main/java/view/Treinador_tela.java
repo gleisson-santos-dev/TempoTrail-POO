@@ -8,22 +8,23 @@ package view;
  *
  * @author gabri
  */
-public class Equipe extends javax.swing.JFrame {
-    private static Equipe instance;
+public class Treinador_tela extends javax.swing.JFrame {
+    private static Treinador_tela instance;
     /**
-     * Creates new form equipe
+     * Creates new form Treinador
      */
-    public Equipe() {
+    public Treinador_tela() {
         initComponents();
         setLocationRelativeTo(null);
     }
     
-    public static Equipe getInstance() {
-        if (instance == null){
-            instance = new Equipe();
+    public static Treinador_tela getInstance() {
+        if (instance == null) {
+            instance = new Treinador_tela();
         }
         return instance;
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,35 +34,16 @@ public class Equipe extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        JbPrincipal = new javax.swing.JButton();
+        JlTitulo = new javax.swing.JLabel();
+        JbFazertreino = new javax.swing.JButton();
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Nome", "Categoria", "Pontuação"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Integer.class
-            };
+        JlTitulo.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        JlTitulo.setText("TempoTrail Treinador");
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(jTable1);
-
-        JbPrincipal.setText("Voltar");
-        JbPrincipal.addActionListener(new java.awt.event.ActionListener() {
+        JbFazertreino.setText("Fazer Treino");
+        JbFazertreino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JbPrincipalActionPerformed(evt);
+                JbFazertreinoActionPerformed(evt);
             }
         });
 
@@ -70,28 +52,30 @@ public class Equipe extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 543, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap(7, Short.MAX_VALUE)
+                .addComponent(JlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21))
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(JbPrincipal)
+                .addGap(116, 116, 116)
+                .addComponent(JbFazertreino)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
+                .addComponent(JlTitulo)
                 .addGap(18, 18, 18)
-                .addComponent(JbPrincipal)
-                .addGap(0, 15, Short.MAX_VALUE))
+                .addComponent(JbFazertreino)
+                .addContainerGap(169, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JbPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbPrincipalActionPerformed
-        new Principal().setVisible(true);
-    }//GEN-LAST:event_JbPrincipalActionPerformed
+    private void JbFazertreinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbFazertreinoActionPerformed
+          new Fazertreino().setVisible(true);
+    }//GEN-LAST:event_JbFazertreinoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -110,13 +94,13 @@ public class Equipe extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Equipe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Treinador_tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Equipe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Treinador_tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Equipe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Treinador_tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Equipe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Treinador_tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -124,14 +108,13 @@ public class Equipe extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Equipe().setVisible(true);
+                new Treinador_tela().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton JbPrincipal;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JButton JbFazertreino;
+    private javax.swing.JLabel JlTitulo;
     // End of variables declaration//GEN-END:variables
 }

@@ -46,7 +46,7 @@ public class Treinador_ctr {
     }
     
     public Treinador info_Treinador_login(Treinador t1){
-        Treinador t2 = new Treinador();
+        Treinador t2 = null;
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -71,6 +71,7 @@ public class Treinador_ctr {
             senha = t1.getSenha();
             while(rs.next()){
                 if(cpf.equals(rs.getString(2)) && nome.equals(rs.getString(1)) && senha.equals(rs.getString(3))){
+                    t2 = new Treinador();
                     t2.setNome(rs.getString(1));
                     t2.setSenha(rs.getString(3));
                     t2.setCpf(rs.getString(2));
